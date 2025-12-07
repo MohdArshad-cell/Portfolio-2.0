@@ -71,7 +71,7 @@ export default function Hero() {
               <Github size={18} /> 
               <span>:: VIEW_CODE</span>
             </a>
-            <a href="/asset/ARSHAD_R.pdf" download className="flex items-center gap-2 px-6 py-3 border border-gray-700 text-gray-300 hover:border-[#7000ff] hover:text-[#7000ff] transition-all">
+            <a href="/asset/ARSHAD.pdf" download className="flex items-center gap-2 px-6 py-3 border border-gray-700 text-gray-300 hover:border-[#7000ff] hover:text-[#7000ff] transition-all">
               <FileText size={18} /> 
               <span>:: DOWNLOAD_CV</span>
             </a>
