@@ -36,7 +36,7 @@ const projects = {
     },
     github: "#",
     // Placeholder image until you create a diagram for FlashTix
-    image: "/asset/architecture.png" 
+    image: "/asset/flashtix-architecture.png" 
   },
   streamflow: {
     title: "StreamFlow",
@@ -51,7 +51,7 @@ const projects = {
     },
     github: "#",
     // Placeholder image
-    image: "/asset/architecture.png" 
+    image: "/asset/streamflow-architecture.png" 
   }
 };
 
