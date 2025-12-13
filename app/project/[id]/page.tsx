@@ -50,7 +50,7 @@ const projects = {
       scale: "Sharded DB" 
     },
     github: "#",
-    // Placeholder image
+  
     image: "/asset/streamflow-architecture.png" 
   }
 };
