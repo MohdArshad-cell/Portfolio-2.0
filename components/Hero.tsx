@@ -28,8 +28,8 @@ export default function Hero() {
   }, []);
 
   return (
-    // ✅ Padding reduced for mobile (px-4)
     <section id="about" className="min-h-screen flex items-center justify-center pt-24 pb-12 px-4 md:px-6 relative overflow-hidden">
+      {/* Background Glow */}
       <div className="absolute top-20 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#7000ff]/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
@@ -47,7 +47,6 @@ export default function Hero() {
             System_Status: Online
           </div>
 
-          {/* ✅ Responsive Font Size: text-4xl on mobile, 7xl on desktop */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-sans mb-4 md:mb-6 tracking-tight leading-tight">
             MOHD <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f3ff] to-[#7000ff]">
@@ -55,10 +54,10 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="text-lg md:text-2xl text-gray-400 font-mono mb-6 md:mb-8 h-8 flex items-center">
-            <span className="text-[#00f3ff] mr-2 md:mr-3">&gt; Architecting</span>
-            {/* ✅ Fixed height/width to prevent layout shift */}
-            <span ref={el} className="text-gray-200 truncate max-w-[200px] md:max-w-none"></span>
+          {/* ✅ FIXED: Removed h-8 (fixed height) & added flex-wrap to handle long text gracefully on mobile */}
+          <div className="text-base sm:text-lg md:text-2xl text-gray-400 font-mono mb-6 md:mb-8 flex flex-wrap items-center gap-2 min-h-[1.5em]">
+            <span className="text-[#00f3ff] whitespace-nowrap">&gt; Architecting</span>
+            <span ref={el} className="text-gray-200"></span>
           </div>
 
           <p className="text-gray-400 leading-relaxed text-sm md:text-base max-w-lg mb-8 border-l-2 border-[#00f3ff]/30 pl-4 md:pl-6">
@@ -79,13 +78,13 @@ export default function Hero() {
           </div>
         </motion.div>
 
+        {/* Right: Tech Stack Visualizer */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }} 
           animate={{ opacity: 1, scale: 1 }} 
           transition={{ delay: 0.2, duration: 0.8 }}
           className="relative flex justify-center mt-8 md:mt-0"
         >
-          {/* ✅ Padding reduced inside card */}
           <div className="relative z-10 glass-card p-6 md:p-8 rounded-2xl border border-white/10 w-full max-w-md">
             <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
               <span className="font-mono text-[10px] md:text-xs text-gray-500">/usr/bin/skills_matrix</span>
