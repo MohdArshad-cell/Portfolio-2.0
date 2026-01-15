@@ -1,6 +1,8 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience"; // ✅ NEW: Import Experience
 import Projects from "@/components/Projects";
 import Research from "@/components/Research";
 import Contact from "@/components/Contact";
@@ -13,7 +15,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Skills />
+      
+      {/* ✅ NEW: Experience Section Added Here */}
+      <Experience />
+      
       <Projects />
+    
       <Research />
       <Contact />
       

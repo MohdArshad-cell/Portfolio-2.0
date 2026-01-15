@@ -4,6 +4,9 @@ import { Terminal } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
+  // ✅ Added "Experience" to the navigation list
+  const navItems = ["About", "Skills", "Experience", "Projects", "Research"];
+
   return (
     <motion.nav 
       initial={{ y: -100 }} 
@@ -18,12 +21,13 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden md:flex gap-8 font-mono text-sm text-gray-400">
-          {["About", "Skills", "Projects", "Research"].map((item, index) => (
+          {navItems.map((item, index) => (
             <Link 
               key={item} 
               href={`#${item.toLowerCase()}`} 
               className="hover:text-[#00f3ff] transition-colors"
             >
+              {/* ✅ Dynamic Numbering: 01_ABOUT, 02_SKILLS, 03_EXPERIENCE... */}
               0{index + 1}_{item.toUpperCase()}
             </Link>
           ))}

@@ -48,7 +48,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, x: 0 }}
           className="flex items-center gap-4 mb-16"
         >
-          <span className="text-[#00f3ff] font-mono text-xl">03.</span>
+          <span className="text-[#00f3ff] font-mono text-xl">04.</span>
           <h2 className="text-4xl md:text-5xl font-bold font-sans">System_Architecture</h2>
           <div className="h-px bg-[#00f3ff]/30 flex-grow max-w-xs ml-4"></div>
         </motion.div>

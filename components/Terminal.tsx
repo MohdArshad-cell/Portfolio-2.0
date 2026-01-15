@@ -38,7 +38,8 @@ export default function Terminal() {
           response = "Commands: help, ls, whoami, clear, contact, exit, [section_name]";
           break;
         case "ls":
-          response = "about  skills  projects  research  resume.pdf";
+          // ✅ Added 'experience' to the file list
+          response = "about  skills  experience  projects  research  resume.pdf";
           break;
         case "whoami":
           response = "Mohd Arshad | Backend Architect | Distributed Systems Engineer";
@@ -55,12 +56,17 @@ export default function Terminal() {
           setIsOpen(false);
           break;
         
-        // --- NEW COMMANDS ADDED HERE ---
+        // --- NAVIGATION COMMANDS ---
         case "about":
           response = navigateToSection("about");
           break;
         case "skills":
           response = navigateToSection("skills");
+          break;
+        // ✅ ADDED: Experience Command
+        case "experience":
+        case "exp":
+          response = navigateToSection("experience");
           break;
         case "projects":
           response = navigateToSection("projects");
@@ -71,7 +77,6 @@ export default function Terminal() {
         case "resume":
         case "resume.pdf":
           response = "Downloading ARSHAD.pdf...";
-          // This triggers a programmatic click to download the file
           const link = document.createElement('a');
           link.href = '/asset/ARSHAD.pdf';
           link.download = 'ARSHAD.pdf';
