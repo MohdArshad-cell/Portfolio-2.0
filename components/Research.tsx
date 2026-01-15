@@ -34,7 +34,7 @@ export default function Research() {
                 unstructured narrative sentiment and kinetic conflict. Utilizing 
                 <span className="text-green-400 font-mono text-sm mx-1">PCA</span> and 
                 <span className="text-green-400 font-mono text-sm mx-1">DistilBERT</span>, 
-                the model achieved 92% correlation accuracy against historical baselines.
+                the model statistically validated the lead-lag relationship within <span className="text-gray-200">simulated conflict scenarios</span>.
               </p>
 
               <a 

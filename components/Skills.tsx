@@ -1,24 +1,27 @@
 "use client";
 import { motion } from "framer-motion";
-import { Server, Brain, Database, Cloud, Code, Terminal, ShieldCheck, Cpu } from "lucide-react";
+import { Server, Brain, Database } from "lucide-react";
 
 const skills = [
   {
     category: "Distributed Systems",
     icon: <Server className="text-[#00f3ff]" size={32} />,
-    items: ["Java Spring Boot 3", "Apache Kafka", "Microservices", "WebSockets (STOMP)", "Redis Pub/Sub", "gRPC"],
+    // Added "System Design" to emphasize architecture skills
+    items: ["Java Spring Boot 3", "Apache Kafka", "Microservices", "System Design", "WebSockets (STOMP)", "Redis Pub/Sub"],
     color: "border-[#00f3ff]/20"
   },
   {
     category: "AI & Data Engineering",
     icon: <Brain className="text-[#7000ff]" size={32} />,
-    items: ["Python", "DistilBERT (Transformers)", "Scikit-learn", "Pandas/NumPy", "Vector Databases", "RAG Pipelines"],
+    // UPDATED: Added "Multi-Agent Systems", "Gemini/OpenAI", "LLM Orchestration"
+    items: ["Python", "Multi-Agent Systems", "Gemini 1.5 / OpenAI", "LLM Orchestration", "DistilBERT", "Vector DBs"],
     color: "border-[#7000ff]/20"
   },
   {
     category: "Core Infrastructure",
     icon: <Database className="text-green-400" size={32} />,
-    items: ["PostgreSQL (ACID)", "MongoDB (Sharding)", "Docker & Kubernetes", "AWS (EC2/S3)", "CI/CD (GitHub Actions)", "Terraform"],
+    // Kept solid backend/infra skills
+    items: ["PostgreSQL (ACID)", "MongoDB (Sharding)", "Docker & Kubernetes", "AWS (EC2/S3)", "CI/CD Actions", "Terraform"],
     color: "border-green-400/20"
   }
 ];

@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { Github, FileText, Server, Database, Code2 } from "lucide-react";
+// ✅ Added 'Brain' to imports for AI section
+import { Github, FileText, Server, Code2, Brain } from "lucide-react"; 
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -11,9 +12,9 @@ export default function Hero() {
     const typed = new Typed(el.current, {
       strings: [
         "Distributed Systems...",
-        "Microservices Architecture...",
+        "Multi-Agent Orchestration...", // 🔥 Added this for Career Catalyst
         "High-Frequency Engines...",
-        "AI Pipelines...",
+        "Hybrid AI Architectures...",
       ],
       typeSpeed: 40,
       backSpeed: 30,
@@ -60,10 +61,11 @@ export default function Hero() {
             <span ref={el} className="text-gray-200"></span>
           </div>
 
+          {/* 🔥 Updated Description */}
           <p className="text-gray-400 leading-relaxed max-w-lg mb-8 border-l-2 border-[#00f3ff]/30 pl-6">
-            Backend Engineer & Distributed Systems Specialist. I build 
-            fault-tolerant architectures, optimize database concurrency 
-            (5000+ req/s), and deploy AI at scale.
+            Backend Engineer & Systems Architect. I engineer fault-tolerant 
+            microservices, optimize high-concurrency engines (5k+ TPS), 
+            and build <span className="text-gray-200">autonomous Multi-Agent AI systems</span>.
           </p>
           
           <div className="flex flex-wrap gap-4 font-mono">
@@ -96,20 +98,23 @@ export default function Hero() {
             </div>
             
             <div className="grid grid-cols-2 gap-4">
-               {/* Tech Box 1 */}
+               {/* Tech Box 1: Backend */}
                <div className="bg-[#0b0d17] p-4 rounded border border-gray-800 flex flex-col items-center gap-2 hover:border-[#00f3ff] transition-colors group">
                   <Server className="text-gray-500 group-hover:text-[#00f3ff]" size={28}/>
                   <span className="text-xs font-mono text-gray-400">Backend</span>
                </div>
-               {/* Tech Box 2 */}
+               
+               {/* Tech Box 2: GenAI (Replaced Database) */}
                <div className="bg-[#0b0d17] p-4 rounded border border-gray-800 flex flex-col items-center gap-2 hover:border-[#7000ff] transition-colors group">
-                  <Database className="text-gray-500 group-hover:text-[#7000ff]" size={28}/>
-                  <span className="text-xs font-mono text-gray-400">Database</span>
+                  <Brain className="text-gray-500 group-hover:text-[#7000ff]" size={28}/>
+                  <span className="text-xs font-mono text-gray-400">GenAI / Agents</span>
                </div>
-               {/* Tech Box 3 */}
+               
+               {/* Tech Box 3: Polyglot Stack */}
                <div className="col-span-2 bg-[#0b0d17] p-4 rounded border border-gray-800 flex items-center justify-center gap-3 hover:border-green-400 transition-colors group">
                   <Code2 className="text-gray-500 group-hover:text-green-400" size={24}/>
-                  <span className="text-xs font-mono text-gray-400">Java / Spring Boot 3 / Kafka</span>
+                  {/* Updated to reflect Java + Python hybrid nature */}
+                  <span className="text-xs font-mono text-gray-400">Java / Python / Kafka</span>
                </div>
             </div>
           </div>

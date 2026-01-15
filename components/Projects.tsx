@@ -1,33 +1,36 @@
 "use client";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Cpu, ShieldAlert, Activity } from "lucide-react";
+import { Github, ExternalLink, Cpu, Activity, Bot } from "lucide-react"; // Bot icon add kiya AI ke liye
 import Link from "next/link"; 
 
 const projects = [
+  // 1. Career Catalyst (Replaced GeoSentinel)
   {
-    title: "GeoSentinel",
-    subtitle: "AI-Driven Geopolitical Risk Engine",
-    desc: "A bi-modal system fusing kinetic data (ACLED) and narrative sentiment to predict conflict escalation.",
-    tech: ["Python", "DistilBERT", "PCA", "Streamlit"],
-    stats: "92% Accuracy",
-    statIcon: <ShieldAlert size={16} className="text-green-400"/>,
-    link: "/project/geosentinel", 
-    color: "hover:border-green-500/50"
+    title: "Career Catalyst",
+    subtitle: "Multi-Agent AI Resume Architect",
+    desc: "Autonomous multi-agent system (Tailor, Evaluator, Optimizer) that iteratively refines resumes to achieve 90+ ATS scores. Uses Hybrid Java-Python architecture.",
+    tech: ["Java Spring Boot", "Gemini 1.5", "Python", "LaTeX"],
+    stats: "Multi-Agent Loop",
+    statIcon: <Bot size={16} className="text-pink-400"/>, // Pink color for GenAI vibe
+    link: "/project/careercatalyst", 
+    color: "hover:border-pink-500/50"
   },
+  // 2. FlashTix (Same as before)
   {
     title: "FlashTix",
     subtitle: "High-Concurrency Ticketing System",
-    desc: "Event booking engine handling 5,000+ req/s. Implements Optimistic Locking (JPA) and Redis Write-Through caching.",
+    desc: "Event booking engine handling 5,000+ req/s. Implements Optimistic Locking (JPA) and Redis Distributed Locks for inventory safety.",
     tech: ["Java Spring Boot", "Redis", "PostgreSQL", "JMeter"],
-    stats: "5k+ TPS / 0 Race Cond.",
+    stats: "5k+ TPS / Zero Oversell",
     statIcon: <Activity size={16} className="text-[#00f3ff]"/>,
     link: "/project/flashtix", 
     color: "hover:border-[#00f3ff]/50"
   },
+  // 3. StreamFlow (Same as before)
   {
     title: "StreamFlow",
     subtitle: "Distributed Notification Service",
-    desc: "Event-driven microservice decoupling producers via Kafka partitions. Processes 1M+ notifications/hour.",
+    desc: "Event-driven microservice decoupling producers via Kafka partitions. Ensures zero data loss with Dead Letter Queues (DLQ).",
     tech: ["Apache Kafka", "WebSockets", "MongoDB", "Java"],
     stats: "1M+ Events/Hr",
     statIcon: <Cpu size={16} className="text-[#7000ff]"/>,
@@ -50,6 +53,7 @@ export default function Projects() {
           <div className="h-px bg-[#00f3ff]/30 flex-grow max-w-xs ml-4"></div>
         </motion.div>
 
+        {/* Grid wapas 3 columns ka hi rakha hai kyunki 3 projects hain */}
         <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((p, i) => (
             <motion.div
