@@ -1,13 +1,13 @@
 # 🚀 Portfolio 2.0 | Next-Gen Developer Architecture
 
-![Portfolio Preview](public/asset/preview-banner.png) 
+
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animation-purple?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
 
-## 🌐 System Overview
-[🔴 Live System Status](https://portfolio-2-0-sigma-gray.vercel.app/)
+## 🌐 System Overview [🔴 Live System Status](https://portfolio-2-0-sigma-gray.vercel.app/)
+
 **Portfolio 2.0** is an immersive, high-performance developer portfolio designed to showcase backend engineering, distributed systems, and AI architecture skills through a futuristic, glassmorphism-based UI. 
 
 Built with **Next.js 14 (App Router)**, it features interactive animations, a CLI-inspired terminal interface, and deep-dive case studies of complex engineering projects.
