@@ -1,7 +1,7 @@
 # ⚡ Arshad_OS | Neural Architecture Interface
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/render?type=soft&color=0b0d17&height=200&section=header&text=MOHD%20ARSHAD&fontSize=70&animation=fadeIn&fontColor=00f3ff" />
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0b0d17&height=200&section=header&text=MOHD%20ARSHAD&fontSize=70&animation=fadeIn&fontColor=00f3ff" />
 </div>
 
 <div align="center">
