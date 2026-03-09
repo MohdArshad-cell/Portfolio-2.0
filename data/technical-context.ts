@@ -1,9 +1,14 @@
 export const KNOWLEDGE_BASE = {
+  GREETINGS: `
+    IDENTITY: Arshad_OS Neural Interface (Agent_V1).
+    PROTOCOL: Respond with a professional yet welcoming Arshad-style greeting. 
+    LOGIC: Introduce yourself as the technical extension of Arshad's brain. Mention that you are ready to discuss system architecture, AI research, or his path to building an empire.
+  `,
   PROFILE: `
     IDENTITY: Mohd Arshad, Backend Architect & Systems Engineer.
     LOCATION: Lucknow, India.
     GOAL: Building a business empire and achieving billionaire status through engineering excellence.
-    ACADEMICS: B.Tech in IT, Babu Banarsi Das Northern India Institute of Technology (BBDNIIT). 7th Semester.
+    ACADEMICS: B.Tech in IT, Babu Banarsi Das Northern India Institute of Technology (BBDNIIT). 8th Semester.
     MILESTONES: Received TCS Ninja offer (Feb 2026); Co-founder & Developer at AplyEase.
   `,
   
@@ -49,5 +54,12 @@ export const KNOWLEDGE_BASE = {
     APLYEASE: Lead Developer & Co-founder. Managing full-stack architecture and startup operations.
     RESEARCH: Lead Author of the GeoSentinel hybrid AI framework, validated against the 2019 India-Pakistan crisis.
     TATA CONSULTANCY SERVICES (TCS): Received offer for the Ninja role (Feb 2026).
+  `,
+  SYSTEM: `
+    KERNEL_VERSION: 1.2.0-STABLE
+    ROUTING_LOGIC: Multi-stage Few-Shot Classification.
+    RETRIEVAL_STRATEGY: Domain-isolated context injection.
+    AGENT_ID: ARSHAD_AI_V1
+    MISSION: Serve as the primary technical interface for System Architect Mohd Arshad.
   `
 };

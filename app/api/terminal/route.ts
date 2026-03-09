@@ -11,20 +11,36 @@ export async function POST(req: Request) {
     // STAGE 1: THE SMART ROUTER (Fixed Syntax & Few-Shot Logic)
     const routerModel = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const routerPrompt = `
-      You are the Arshad_OS Router. Classify the query into exactly ONE category: PROFILE, SKILLS, PROJECTS, PHILOSOPHY, EXPERIENCE.
-      
-      Few-Shot Examples:
-      "How do you handle Kafka retries?" -> PROJECTS
-      "What is your tech stack?" -> SKILLS
-      "Why do you want to be a billionaire?" -> PHILOSOPHY
-      "Tell me about your college." -> PROFILE
-      "Where have you worked?" -> EXPERIENCE
-      "Explain the LUA script in FlashTix" -> PROJECTS
-      "What is PCA weighting?" -> PROJECTS
+  You are the Arshad_OS Neural Router. Your mission is to classify the user's intent into exactly ONE category to ensure the Kernel accesses the correct memory module.
 
-      Query: "${command}"
-      Respond ONLY with the category name.
-    `;
+  CLASSIFICATION PROTOCOL:
+  - GREETINGS: Casual talk, "hello", "how are you", or general introductions.
+  - PROFILE: Personal details, education (BBDNIIT), location, or "Who is Arshad?".
+  - SKILLS: Technical stack, languages (Java, Python), tools (Kafka, Docker), or certifications (OCI).
+  - PROJECTS: Specific logic of FlashTix, StreamFlow, Career Catalyst, or GeoSentinel.
+  - PHILOSOPHY: Ambitions, "billionaire" mindset, brutally honest approach, or career goals.
+  - EXPERIENCE: Professional history, AplyEase startup, TCS offer, or research roles.
+
+  FEW-SHOT TRAINING DATA:
+  "Hi, who are you?" -> GREETINGS
+  "Hey Arshad, what's up?" -> GREETINGS
+  "Tell me about your college life." -> PROFILE
+  "Where is Lucknow?" -> PROFILE
+  "What is your expertise in Spring Boot?" -> SKILLS
+  "Do you know how to use Kubernetes?" -> SKILLS
+  "Explain the JPA Versioning in FlashTix." -> PROJECTS
+  "How does the Kafka DLQ work in StreamFlow?" -> PROJECTS
+  "What is the math behind GeoSentinel's PCA?" -> PROJECTS
+  "Why do you value brutal honesty?" -> PHILOSOPHY
+  "Why do you want to build an empire?" -> PHILOSOPHY
+  "Tell me about your time at AplyEase." -> EXPERIENCE
+  "What was your role in the GeoSentinel research?" -> EXPERIENCE
+  "Tell me about the TCS Ninja offer." -> EXPERIENCE
+
+  QUERY: "${command}"
+  
+  RESPONSE_FORMAT: Respond with ONLY the category name in uppercase. If unsure, default to GREETINGS for casual queries or PROJECTS for technical ones.
+`;
     
     const routerResult = await routerModel.generateContent(routerPrompt);
     const category = routerResult.response.text().trim().toUpperCase() as keyof typeof KNOWLEDGE_BASE;
