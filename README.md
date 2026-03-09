@@ -1,148 +1,67 @@
-# 🚀 Portfolio 2.0 | Arshad_OS Neural Architecture
+# ⚡ Arshad_OS | Neural Architecture Interface
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=0b0d17&height=200&section=header&text=MOHD%20ARSHAD&fontSize=70&animation=fadeIn&fontColor=00f3ff" />
+</div>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Role-Backend_Architect-00f3ff?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Focus-Distributed_Systems-white?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Empire_Building-00f3ff?style=for-the-badge" />
+</div>
 
 ---
 
-## 🌐 System Overview
-
-**Live Demo** [https://portfolio-2-0-sigma-gray.vercel.app/](https://portfolio-2-0-sigma-gray.vercel.app/)
-
-Portfolio 2.0 is an immersive, high-performance developer command center designed to showcase backend engineering, distributed systems, and AI architecture. The system's core is the **Neural Kernel Interface**—a custom-built terminal that uses a multi-stage AI router to defend architectural decisions using direct facts from source code.
-
-The project focuses on high-density information, responsive design, and an "Industrial Minimalism" aesthetic.
+### 📡 System Diagnostic
+- **Current Objective**: Architecting high-concurrency engines and neural RAG interfaces.
+- **Core Philosophy**: Brutally honest logic. Scalability is non-negotiable.
+- **Recent Achievement**: Developed a **Neural Kernel** for Portfolio 2.0 with multi-stage RAG routing.
 
 ---
 
-## ✨ Key Features
+### 🛠️ Technical Stack [KERNEL_LOAD_88%]
 
-* **Neural Kernel (RAG AI):** A RAG-powered (Retrieval-Augmented Generation) terminal that acts as a technical intelligence engine.
-* **Router-Based Architecture:** Uses a two-stage neural pipeline to classify user intent into domain-isolated modules (Profile, Skills, Projects, Philosophy, Experience, Greetings).
-* **Industrial HUD UI:** A professional, high-contrast terminal interface featuring real-time routing logs and kernel status indicators.
-* **Project Blueprints:** Deep-dive case studies with technical reasoning grounded in production-level code.
-* **Cyberpunk Aesthetic:** Neon gradients, glassmorphism cards, and structured terminal typography.
-
----
-
-## 🛠️ Technical Stack
-
-* **Framework:** Next.js 15 (App Router)
-* **Neural Engine:** Google Gemini 1.5 Flash (via RAG Kernel)
-* **Language:** TypeScript
-* **Styling:** Tailwind CSS (Industrial Minimalism)
-* **Animations:** Framer Motion
-* **Icons:** Lucide React
-* **Utilities:** Typed.js
-* **Media Interaction:** React Medium Image Zoom
+| Category | Protocol / Tools |
+| :--- | :--- |
+| **Backend Core** | `Java (Spring Boot)`, `Python (FastAPI)`, `Node.js` |
+| **Data Backbone** | `Apache Kafka`, `Redis (LUA Scripting)`, `PostgreSQL`, `MongoDB` |
+| **Neural/AI** | `Gemini 1.5`, `RAG Architectures`, `DistilBERT`, `Prompt Engineering` |
+| **Infrastructure** | `OCI Certified`, `Docker`, `CI/CD`, `Linux Kernel` |
 
 ---
 
-## ⚡ Quick Start
+### 📂 Active Neural Projects
 
-### Prerequisites
+#### 🎟️ [FlashTix](https://github.com/mohdarshad-cell/flashtix)
+[cite_start]**High-Concurrency Engine** handling 5,000+ TPS[cite: 31]. 
+- [cite_start]**Innovation**: Atomic LUA scripts for Redis locking and JPA Optimistic versioning.
 
-Install Node.js version 18 or higher.
+#### 🤖 [Career Catalyst](https://github.com/mohdarshad-cell/ai-powered-career-catalyst)
+[cite_start]**Multi-Agent AI Loop** for resume orchestration[cite: 1, 2].
+- [cite_start]**Innovation**: 4-agent autonomous feedback loop (Analyst → Strategist → Writer → Reviewer).
 
-### Clone Repository
-
-```bash
-git clone https://github.com/MohdArshad-cell/Portfolio-2.0.git
-cd Portfolio-2.0
-
-```
-
-### Install Dependencies
-
-```bash
-npm install
-
-```
-
-### Run Development Server
-
-```bash
-npm run dev
-
-```
+#### 📡 [StreamFlow](https://github.com/mohdarshad-cell/streamflow)
+[cite_start]**Distributed Notification Backbone** with 0% data loss guarantee.
+- [cite_start]**Innovation**: Kafka-based DLQ (Dead Letter Queue) and sub-ms Redis caching.
 
 ---
 
-## 📂 Featured Engineering Case Studies
+### 📊 System Stats
 
-### 1. 🤖 Career Catalyst (Multi-Agent AI System)
-
-* 
-**Tech Stack:** Java Spring Boot, Python, Gemini 1.5 Flash, LaTeX.
-
-
-* 
-**Description:** Orchestrates a 4-agent "Thinking Loop" (Analyst, Strategist, Writer, Reviewer) to autonomously refine resumes into meticulous LaTeX documents.
-
-
-* 
-**Key Logic:** Java triggers Python scripts via STDIN/STDOUT to handle iterative LLM-based quality control.
-
-
-
-### 2. 🎟️ FlashTix (High-Concurrency Booking Engine)
-
-* 
-**Tech Stack:** Java, Redis Distributed Locks, PostgreSQL.
-
-
-* 
-**Description:** A high-concurrency engine designed to handle 5,000+ requests per second while preventing double bookings via dual-layer protection.
-
-
-* 
-**Atomic Safety:** Employs Redis `setIfAbsent` for application-level locking and a custom LUA script for atomic "get-and-delete" unlocking.
-
-
-* 
-**Reliability:** Implements JPA Optimistic Locking (@Version) and `@Retryable` with exponential backoff for row-level integrity.
-
-
-
-### 3. 📡 StreamFlow (Distributed Notification System)
-
-* **Tech Stack:** Apache Kafka, WebSockets, MongoDB, Redis.
-* **Description:** An event-driven notification backbone using Kafka for decoupling and 0% data loss guarantee.
-* **Reliability:** Features a 3-attempt retry loop followed by a Dead Letter Queue (DLQ) fallback.
-* **Performance:** Uses Redis (LTrim/LPush) for sub-ms retrieval of the 10 most recent alerts.
-
-### 4. 🌍 GeoSentinel (Research Simulation)
-
-* 
-**Tech Stack:** Python, DistilBERT, LLM filtering, PCA.
-
-
-* 
-**Description:** A "Two-Pillar" framework (Military Kinetic Events and Intelligent Narrative Sentiment) for geopolitical tension analysis.
-
-
-* 
-**Innovation:** Uses Principal Component Analysis (PCA) over a 36-month rolling window to dynamically adjust pillar weighting.
-
-
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=mohdarshad-cell&show_icons=true&theme=tokyonight&bg_color=0b0d17&title_color=00f3ff&text_color=ffffff&border_color=00f3ff" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohdarshad-cell&layout=compact&theme=tokyonight&bg_color=0b0d17&title_color=00f3ff&text_color=ffffff&border_color=00f3ff" width="48%" />
+</div>
 
 ---
 
-## 📸 Screenshots
+### 🔗 Secure Link Established
+- **LinkedIn**: [mohd-arshad](https://www.linkedin.com/in/mohd-arshad-156227314)
+- **Portfolio**: [portfolio-2-0.vercel.app](https://portfolio-2-0-sigma-gray.vercel.app/)
+- **Email**: [arshadmohd8574@gmail.com](mailto:arshadmohd8574@gmail.com)
 
-Hero Section
-`/public/asset/hero_preview.png`
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=mohdarshad-cell&color=00f3ff&style=flat-square&label=KERNEL_ACCESS_LOGS" />
+</div>
 
-Projects Section
-`/public/asset/project_preview.png`
-
----
-
-## 👨‍💻 Author
-
-**Mohd Arshad** *Backend Architect & Distributed Systems Specialist*
-
-* **GitHub:** [https://github.com/MohdArshad-cell](https://github.com/MohdArshad-cell)
-* **LinkedIn:** [https://www.linkedin.com/in/mohd-arshad-156227314](https://www.linkedin.com/in/mohd-arshad-156227314)
-* **Email:** [arshadmohd8574@gmail.com](mailto:arshadmohd8574@gmail.com)
-
----
-
-> "Architecting the future of distributed intelligence, one kernel at a time." 🚀
+> "Architecting scalable systems, one microservice at a time." 🚀
