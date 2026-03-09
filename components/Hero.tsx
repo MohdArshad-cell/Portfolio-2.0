@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   const el = useRef(null);
 
-  useEffect(() => {
+useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
         "Distributed Systems...",
@@ -18,8 +18,11 @@ export default function Hero() {
       typeSpeed: 40,
       backSpeed: 30,
       backDelay: 1500,
+      startDelay: 500, // 🔴 NEW: Allows initial page paint before JS starts
       loop: true,
+      showCursor: true,
       cursorChar: "█",
+      autoInsertCss: true, // Ensures cursor styling doesn't pop in late
     });
 
     return () => {
@@ -35,10 +38,11 @@ export default function Hero() {
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
         
         <motion.div 
-          initial={{ opacity: 0, x: -50 }} 
-          animate={{ opacity: 1, x: 0 }} 
-          transition={{ duration: 0.8 }}
-        >
+  initial={{ opacity: 1, x: 0 }} // 🔴 CHANGE: Set opacity to 1 immediately
+  animate={{ opacity: 1, x: 0 }} 
+  // Keep the transition if you want the slide, but don't hide the text
+  transition={{ duration: 0.5 }}
+>
           <div className="flex items-center gap-2 font-mono text-[#00f3ff] text-xs md:text-sm mb-4">
             <span className="relative flex h-2 w-2 md:h-3 md:w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f3ff] opacity-75"></span>
@@ -67,14 +71,26 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 font-mono text-sm">
-            <a href="https://github.com/MohdArshad-cell" target="_blank" className="flex items-center justify-center gap-2 px-6 py-3 bg-[#00f3ff]/10 border border-[#00f3ff] text-[#00f3ff] hover:bg-[#00f3ff] hover:text-black transition-all group rounded">
-              <Github size={18} /> 
-              <span>:: VIEW_CODE</span>
-            </a>
-            <a href="/asset/ARSHAD.pdf" download className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-700 text-gray-300 hover:border-[#7000ff] hover:text-[#7000ff] transition-all rounded">
-              <FileText size={18} /> 
-              <span>:: DOWNLOAD_CV</span>
-            </a>
+            <a 
+  href="https://github.com/MohdArshad-cell" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  aria-label="View Mohd Arshad's GitHub Profile (opens in a new tab)"
+  className="flex items-center justify-center gap-2 px-6 py-3 bg-[#00f3ff]/10 border border-[#00f3ff] text-[#00f3ff] hover:bg-[#00f3ff] hover:text-black transition-all group rounded"
+>
+  <Github size={18} aria-hidden="true" /> 
+  <span>:: VIEW_CODE</span>
+</a>
+
+<a 
+  href="/asset/ARSHAD.pdf" 
+  download 
+  aria-label="Download Mohd Arshad's Resume as PDF"
+  className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-700 text-gray-300 hover:border-[#7000ff] hover:text-[#7000ff] transition-all rounded"
+>
+  <FileText size={18} aria-hidden="true" /> 
+  <span>:: DOWNLOAD_CV</span>
+</a>
           </div>
         </motion.div>
 
@@ -87,7 +103,8 @@ export default function Hero() {
         >
           <div className="relative z-10 glass-card p-6 md:p-8 rounded-2xl border border-white/10 w-full max-w-md">
             <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-              <span className="font-mono text-[10px] md:text-xs text-gray-500">/usr/bin/skills_matrix</span>
+              {/* Find this line and change gray-500 to gray-400 */}
+<span className="font-mono text-[10px] md:text-xs text-gray-400">/usr/bin/skills_matrix</span>
               <div className="flex gap-1.5">
                 <div className="w-2 md:w-2.5 h-2 md:h-2.5 rounded-full bg-red-500/80"/>
                 <div className="w-2 md:w-2.5 h-2 md:h-2.5 rounded-full bg-yellow-500/80"/>

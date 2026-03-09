@@ -18,15 +18,16 @@ export default function StatusBar() {
     updateTime();
     const interval = setInterval(updateTime, 1000);
 
-    // 2. Fetch Real User Data (Using ipwho.is - More reliable for Portfolios)
-    fetch('https://ipwho.is/')
+    // 2. Fetch Real User Data (Using ipapi.co - Allows client-side CORS)
+    fetch('https://ipapi.co/json/')
       .then(res => res.json())
       .then(data => {
-        if (data.success) {
+        // ipapi returns the direct object. If it fails, it usually has an error property.
+        if (data.ip && !data.error) {
           setLocation(`${data.city}, ${data.country_code}`);
           setIp(data.ip);
         } else {
-          console.warn("IP Fetch Error:", data.message);
+          console.warn("IP Fetch Error:", data.reason || "Rate limited or unknown error");
           setLocation("UNKNOWN_ORIGIN");
         }
       })
@@ -39,22 +40,22 @@ export default function StatusBar() {
   }, []);
 
   return (
-    <div className="fixed bottom-0 w-full bg-[#0b0d17] border-t border-white/10 py-1 px-4 flex justify-between items-center text-[10px] md:text-xs font-mono text-gray-500 z-50 select-none backdrop-blur-md bg-[#0b0d17]/90">
+    <div className="fixed bottom-0 w-full bg-[#0b0d17] border-t border-white/10 py-1 px-4 flex justify-between items-center text-[10px] md:text-xs font-mono text-gray-400 z-50 select-none backdrop-blur-md bg-[#0b0d17]/90">
       <div className="flex gap-4 md:gap-6">
         <div className="flex items-center gap-2 text-[#00f3ff]">
-          <Wifi size={12} />
+          <Wifi size={12} aria-hidden="true" />
           <span className="hidden sm:inline">SYSTEM_ONLINE</span>
           <span className="sm:hidden">ON</span>
         </div>
         <div className="hidden md:flex items-center gap-2 hover:text-white transition-colors cursor-help" title="Your Public IP">
-          <Globe size={12} />
+          <Globe size={12} aria-hidden="true" />
           <span>CLIENT_IP: {ip}</span>
         </div>
       </div>
 
       <div className="flex gap-4 md:gap-6">
         <div className="flex items-center gap-2 text-green-400">
-          <MapPin size={12} />
+          <MapPin size={12} aria-hidden="true" />
           <span>{location.toUpperCase()}</span>
         </div>
         <div className="text-[#00f3ff] min-w-[60px] text-right">
