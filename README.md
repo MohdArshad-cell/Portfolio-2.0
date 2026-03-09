@@ -1,6 +1,3 @@
-Paste this directly into your README.md file.
-
-````
 # 🚀 Portfolio 2.0 | Next-Gen Developer Architecture
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
@@ -230,4 +227,4 @@ If you want, I will also give you:
 - **auto deployment badge**
 
 This makes your repo look far stronger for placements.
-```
+
