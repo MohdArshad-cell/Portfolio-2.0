@@ -68,11 +68,15 @@ export async function POST(req: Request) {
         timestamp: new Date().toISOString()
       } 
     });
-  } catch (error) {
-    console.error("Kernel Panic:", error);
-    return NextResponse.json({ 
-      response: "CRITICAL_FAILURE: Kernel Panic. Routing engine offline.",
-      metadata: { status: "ERROR" }
-    }, { status: 500 });
-  }
+} catch (error) {
+  // Use Type Guarding instead of 'any'
+  const errorMessage = error instanceof Error ? error.message : "Unknown Kernel Error";
+  
+  console.error("KERNEL_PANIC_DETAILS:", errorMessage);
+  
+  return NextResponse.json({ 
+    response: `CRITICAL_FAILURE: ${errorMessage}`,
+    metadata: { status: "ERROR" }
+  }, { status: 500 });
+}
 }
