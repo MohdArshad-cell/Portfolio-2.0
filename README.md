@@ -46,13 +46,19 @@
 
 ---
 
-### 📊 System Stats
+### 📊 System Analytics [KERNEL_MONITOR_ACTIVE]
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mohdarshad-cell&show_icons=true&theme=tokyonight&bg_color=0b0d17&title_color=00f3ff&text_color=ffffff&border_color=00f3ff" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohdarshad-cell&layout=compact&theme=tokyonight&bg_color=0b0d17&title_color=00f3ff&text_color=ffffff&border_color=00f3ff" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=mohdarshad-cell&show_icons=true&theme=tokyonight&bg_color=0b0d17&title_color=00f3ff&text_color=ffffff&border_color=0b0d17&hide_border=true&cache_seconds=86400" width="48%" alt="Arshad's GitHub Stats" />
+  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohdarshad-cell&layout=compact&theme=tokyonight&bg_color=0b0d17&title_color=00f3ff&text_color=ffffff&border_color=0b0d17&hide_border=true&cache_seconds=86400" width="48%" alt="Top Languages" />
 </div>
 
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mohdarshad-cell&theme=tokyonight&background=0b0d17&fire=00f3ff&ring=00f3ff&stroke=00f3ff" width="48%" alt="GitHub Streak" />
+  
+  <img src="https://komarev.com/ghpvc/?username=mohdarshad-cell&color=00f3ff&style=flat-square&label=SYSTEM_ACCESS_COUNT" width="48%" alt="Visitor Count" />
+</div>
 ---
 
 ### 🔗 Secure Link Established
