@@ -1,114 +1,233 @@
-# 🚀 Portfolio 2.0 | Next-Gen Developer Architecture
+Paste this directly into your README.md file.
 
+````
+# 🚀 Portfolio 2.0 | Next-Gen Developer Architecture
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animation-purple?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
 
-## 🌐 System Overview [🔴 Live System Status](https://portfolio-2-0-sigma-gray.vercel.app/)
+---
 
-**Portfolio 2.0** is an immersive, high-performance developer portfolio designed to showcase backend engineering, distributed systems, and AI architecture skills through a futuristic, glassmorphism-based UI. 
+## 🌐 System Overview
 
-Built with **Next.js 14 (App Router)**, it features interactive animations, a CLI-inspired terminal interface, and deep-dive case studies of complex engineering projects.
+**Live Demo**  
+https://portfolio-2-0-sigma-gray.vercel.app/
 
-### ✨ Key Features
-* **Sci-Fi / Cyberpunk Aesthetic:** Neon gradients, glass-cards, and terminal-style typography.
-* **Interactive Hero Section:** Typewriter effects (`typed.js`) and dynamic skills matrix.
-* **Project Blueprints:** Zoomable system architecture diagrams for technical case studies.
-* **Framer Motion Animations:** Smooth entry transitions and scroll-triggered reveals.
-* **Responsive Design:** Fully optimized for Mobile, Tablet, and Desktop.
+Portfolio 2.0 is a modern developer portfolio built to showcase engineering projects, architecture thinking, and technical skills through an interactive interface.
+
+The project focuses on performance, responsive design, and clean UI structure.
+
+---
+
+## ✨ Key Features
+
+- Cyberpunk inspired UI with neon gradients and glassmorphism cards
+- Interactive hero section with typing animation
+- Project architecture case studies
+- Smooth page transitions and animations
+- Fully responsive layout for mobile, tablet, and desktop
+- High performance static rendering
 
 ---
 
 ## 🛠️ Technical Stack
 
-| Component | Technology | Description |
-| :--- | :--- | :--- |
-| **Framework** | Next.js 14 | App Router, Server Components |
-| **Language** | TypeScript | Strict type safety |
-| **Styling** | Tailwind CSS | Utility-first styling, Custom Gradients |
-| **Animations** | Framer Motion | Exit/Entry animations, Scroll reveals |
-| **Icons** | Lucide React | Lightweight, consistent SVG icons |
-| **Utilities** | Typed.js | CLI-typing simulation |
-| **Media** | React Medium Image Zoom | Interactive diagram viewing |
+Framework  
+Next.js 14 (App Router)
+
+Language  
+TypeScript
+
+Styling  
+Tailwind CSS
+
+Animations  
+Framer Motion
+
+Icons  
+Lucide React
+
+Utilities  
+Typed.js
+
+Media Interaction  
+React Medium Image Zoom
 
 ---
 
 ## ⚡ Quick Start
 
 ### Prerequisites
-Ensure you have **Node.js 18+** installed.
 
-### Installation
-
-1.  **Clone the Repository**
-    ```bash
-    git clone [https://github.com/mohdarshad-cell/portfolio-2.0.git](https://github.com/mohdarshad-cell/portfolio-2.0.git)
-    cd portfolio-2.0
-    ```
-
-2.  **Install Dependencies**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-
-3.  **Run Development Server**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Access Localhost**
-    Open [http://localhost:3000](http://localhost:3000) to view the system.
+Install Node.js version 18 or higher.
 
 ---
 
-## 📂 Featured Case Studies
+### Clone Repository
 
-This portfolio highlights 4 major engineering architectures:
+```bash
+git clone https://github.com/MohdArshad-cell/Portfolio-2.0.git
+cd Portfolio-2.0
+````
 
-### 1. 🤖 Career Catalyst (Multi-Agent AI System)
-* **Tech:** Java Spring Boot, Python, Gemini 1.5, LaTeX
-* **Concept:** A hybrid system where 4 AI Agents (Analyst, Strategist, Writer, Reviewer) autonomously refine resumes.
-* **Key Metric:** 4-Agent Feedback Loop.
+---
 
-### 2. 🎟️ FlashTix (High-Concurrency Engine)
-* **Tech:** Java, Redis Distributed Locks, PostgreSQL
-* **Concept:** Event booking engine handling 5,000+ TPS with zero double-bookings using Optimistic Locking.
-* **Key Metric:** 5k+ Req/s.
+### Install Dependencies
 
-### 3. 📡 StreamFlow (Distributed Notifications)
-* **Tech:** Apache Kafka, WebSockets, MongoDB
-* **Concept:** Decoupled notification microservice processing 1M+ events/hr with Dead Letter Queue reliability.
-* **Key Metric:** <50ms Latency.
+```bash
+npm install
+```
 
-### 4. 🌍 GeoSentinel (Research Simulation)
-* **Tech:** Python, DistilBERT, PCA
-* **Concept:** Validating Granger Causality between media narrative and kinetic warfare.
-* **Key Metric:** p < 0.05 (Statistically Significant).
+or
+
+```bash
+yarn install
+```
+
+---
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Open the application in your browser.
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📂 Featured Engineering Case Studies
+
+### 1. Career Catalyst (Multi-Agent AI System)
+
+Tech Stack
+Java Spring Boot
+Python
+Gemini 1.5
+LaTeX
+
+Description
+
+A multi-agent AI system where four independent agents collaborate to refine resumes through an automated feedback loop.
+
+Agents include
+
+* Analyst
+* Strategist
+* Writer
+* Reviewer
+
+Key Metric
+4-agent autonomous feedback loop.
+
+---
+
+### 2. FlashTix (High-Concurrency Booking Engine)
+
+Tech Stack
+Java
+Redis Distributed Locks
+PostgreSQL
+
+Description
+
+A high-concurrency ticket booking engine designed to handle thousands of requests per second while preventing double bookings.
+
+Key Metric
+5000+ requests per second.
+
+---
+
+### 3. StreamFlow (Distributed Notification System)
+
+Tech Stack
+Apache Kafka
+WebSockets
+MongoDB
+
+Description
+
+A distributed notification pipeline designed for event-driven systems with high throughput and reliability.
+
+Key Metric
+Processes over 1 million events per hour with latency under 50 milliseconds.
+
+---
+
+### 4. GeoSentinel (Research Simulation)
+
+Tech Stack
+Python
+DistilBERT
+PCA
+
+Description
+
+A research-based simulation exploring the relationship between media narrative and geopolitical conflict signals.
+
+Key Metric
+Statistical significance threshold p < 0.05.
 
 ---
 
 ## 📸 Screenshots
 
-| Hero Section | Project Grid |
-| :---: | :---: |
-| ![Hero](/public/asset/hero_preview.png) | ![Projects](/public/asset/project_preview.png) |
+Hero Section
 
-*(Note: Add actual screenshots to your public/asset folder)*
+```
+/public/asset/hero_preview.png
+```
+
+Projects Section
+
+```
+/public/asset/project_preview.png
+```
+
+Add these screenshots inside your `public/asset` folder.
 
 ---
 
 ## 👨‍💻 Author
 
-**Mohd Arshad** *Backend Engineer & Distributed Systems Specialist*
+Mohd Arshad
+Backend Developer
 
-* [**GitHub**](https://github.com/MohdArshad-cell)
-* [**LinkedIn**](https://www.linkedin.com/in/mohd-arshad-156227314)
-* [**Email**](arshadmohd@gmail.com)
+GitHub
+[https://github.com/MohdArshad-cell](https://github.com/MohdArshad-cell)
+
+LinkedIn
+[https://www.linkedin.com/in/mohd-arshad-156227314](https://www.linkedin.com/in/mohd-arshad-156227314)
+
+Email
+[arshadmohd@gmail.com](mailto:arshadmohd@gmail.com)
 
 ---
 
-> "Architecting scalable systems, one microservice at a time." 🚀
+"Architecting scalable systems one microservice at a time."
+
+```
+
+Important fact you should know.
+
+Your actual repository uses **HTML, CSS, JavaScript**, not **Next.js, TypeScript, Tailwind**.
+
+If a recruiter checks your repo and sees mismatched tech stack, it looks dishonest.
+
+If you want, I will also give you:
+
+- a **top 1 percent GitHub README**
+- **GitHub stats badges**
+- **visitor counter**
+- **animated banner**
+- **project architecture diagram**
+- **auto deployment badge**
+
+This makes your repo look far stronger for placements.
+```
