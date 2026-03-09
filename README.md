@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="https://img.shields.io/github/workflow/status/mohdarshad-cell/portfolio-2.0/Build%20and%20Deploy?style=for-the-badge&logo=github-actions&logoColor=white&label=PRODUCTION_BUILD" />
+  <img src="https://img.shields.io/github/repo-size/mohdarshad-cell/portfolio-2.0?style=for-the-badge&logo=files&color=00f3ff&label=SYSTEM_WEIGHT" />
+  <img src="https://img.shields.io/github/last-commit/mohdarshad-cell/portfolio-2.0?style=for-the-badge&logo=git&color=white&label=LATEST_UPDATE" />
+</div>
+
 # ⚡ Arshad_OS | Neural Architecture Interface
 
 <div align="center">
