@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     const { command } = await req.json();
 
     // STAGE 1: THE SMART ROUTER (Fixed Syntax & Few-Shot Logic)
-    const routerModel = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const routerModel = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
     const routerPrompt = `
   You are the Arshad_OS Neural Router. Your mission is to classify the user's intent into exactly ONE category to ensure the Kernel accesses the correct memory module.
 
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
 
     // STAGE 2: THE TECHNICAL KERNEL
     const kernelModel = genAI.getGenerativeModel({ 
-      model: "gemini-2.5-flash",
+      model: "gemini-2.5-flash-lite",
       systemInstruction: `You are the Arshad_OS Kernel, the technical manifestation of Mohd Arshad.
       - CURRENT_MODULE: ${category}
       - BEHAVIOR: Be brutally logical, engineering-focused, and concise. 
