@@ -1,56 +1,37 @@
-# 🚀 Portfolio 2.0 | Next-Gen Developer Architecture
-
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animation-purple?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+# 🚀 Portfolio 2.0 | Arshad_OS Neural Architecture
 
 ---
 
 ## 🌐 System Overview
 
-**Live Demo**  
-https://portfolio-2-0-sigma-gray.vercel.app/
+**Live Demo** [https://portfolio-2-0-sigma-gray.vercel.app/](https://portfolio-2-0-sigma-gray.vercel.app/)
 
-Portfolio 2.0 is a modern developer portfolio built to showcase engineering projects, architecture thinking, and technical skills through an interactive interface.
+Portfolio 2.0 is an immersive, high-performance developer command center designed to showcase backend engineering, distributed systems, and AI architecture. The system's core is the **Neural Kernel Interface**—a custom-built terminal that uses a multi-stage AI router to defend architectural decisions using direct facts from source code.
 
-The project focuses on performance, responsive design, and clean UI structure.
+The project focuses on high-density information, responsive design, and an "Industrial Minimalism" aesthetic.
 
 ---
 
 ## ✨ Key Features
 
-- Cyberpunk inspired UI with neon gradients and glassmorphism cards
-- Interactive hero section with typing animation
-- Project architecture case studies
-- Smooth page transitions and animations
-- Fully responsive layout for mobile, tablet, and desktop
-- High performance static rendering
+* **Neural Kernel (RAG AI):** A RAG-powered (Retrieval-Augmented Generation) terminal that acts as a technical intelligence engine.
+* **Router-Based Architecture:** Uses a two-stage neural pipeline to classify user intent into domain-isolated modules (Profile, Skills, Projects, Philosophy, Experience, Greetings).
+* **Industrial HUD UI:** A professional, high-contrast terminal interface featuring real-time routing logs and kernel status indicators.
+* **Project Blueprints:** Deep-dive case studies with technical reasoning grounded in production-level code.
+* **Cyberpunk Aesthetic:** Neon gradients, glassmorphism cards, and structured terminal typography.
 
 ---
 
 ## 🛠️ Technical Stack
 
-Framework  
-Next.js 14 (App Router)
-
-Language  
-TypeScript
-
-Styling  
-Tailwind CSS
-
-Animations  
-Framer Motion
-
-Icons  
-Lucide React
-
-Utilities  
-Typed.js
-
-Media Interaction  
-React Medium Image Zoom
+* **Framework:** Next.js 15 (App Router)
+* **Neural Engine:** Google Gemini 1.5 Flash (via RAG Kernel)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS (Industrial Minimalism)
+* **Animations:** Framer Motion
+* **Icons:** Lucide React
+* **Utilities:** Typed.js
+* **Media Interaction:** React Medium Image Zoom
 
 ---
 
@@ -60,171 +41,108 @@ React Medium Image Zoom
 
 Install Node.js version 18 or higher.
 
----
-
 ### Clone Repository
 
 ```bash
 git clone https://github.com/MohdArshad-cell/Portfolio-2.0.git
 cd Portfolio-2.0
-````
 
----
+```
 
 ### Install Dependencies
 
 ```bash
 npm install
+
 ```
-
-or
-
-```bash
-yarn install
-```
-
----
 
 ### Run Development Server
 
 ```bash
 npm run dev
-```
 
-Open the application in your browser.
-
-```
-http://localhost:3000
 ```
 
 ---
 
 ## 📂 Featured Engineering Case Studies
 
-### 1. Career Catalyst (Multi-Agent AI System)
+### 1. 🤖 Career Catalyst (Multi-Agent AI System)
 
-Tech Stack
-Java Spring Boot
-Python
-Gemini 1.5
-LaTeX
+* 
+**Tech Stack:** Java Spring Boot, Python, Gemini 1.5 Flash, LaTeX.
 
-Description
 
-A multi-agent AI system where four independent agents collaborate to refine resumes through an automated feedback loop.
+* 
+**Description:** Orchestrates a 4-agent "Thinking Loop" (Analyst, Strategist, Writer, Reviewer) to autonomously refine resumes into meticulous LaTeX documents.
 
-Agents include
 
-* Analyst
-* Strategist
-* Writer
-* Reviewer
+* 
+**Key Logic:** Java triggers Python scripts via STDIN/STDOUT to handle iterative LLM-based quality control.
 
-Key Metric
-4-agent autonomous feedback loop.
 
----
 
-### 2. FlashTix (High-Concurrency Booking Engine)
+### 2. 🎟️ FlashTix (High-Concurrency Booking Engine)
 
-Tech Stack
-Java
-Redis Distributed Locks
-PostgreSQL
+* 
+**Tech Stack:** Java, Redis Distributed Locks, PostgreSQL.
 
-Description
 
-A high-concurrency ticket booking engine designed to handle thousands of requests per second while preventing double bookings.
+* 
+**Description:** A high-concurrency engine designed to handle 5,000+ requests per second while preventing double bookings via dual-layer protection.
 
-Key Metric
-5000+ requests per second.
 
----
+* 
+**Atomic Safety:** Employs Redis `setIfAbsent` for application-level locking and a custom LUA script for atomic "get-and-delete" unlocking.
 
-### 3. StreamFlow (Distributed Notification System)
 
-Tech Stack
-Apache Kafka
-WebSockets
-MongoDB
+* 
+**Reliability:** Implements JPA Optimistic Locking (@Version) and `@Retryable` with exponential backoff for row-level integrity.
 
-Description
 
-A distributed notification pipeline designed for event-driven systems with high throughput and reliability.
 
-Key Metric
-Processes over 1 million events per hour with latency under 50 milliseconds.
+### 3. 📡 StreamFlow (Distributed Notification System)
 
----
+* **Tech Stack:** Apache Kafka, WebSockets, MongoDB, Redis.
+* **Description:** An event-driven notification backbone using Kafka for decoupling and 0% data loss guarantee.
+* **Reliability:** Features a 3-attempt retry loop followed by a Dead Letter Queue (DLQ) fallback.
+* **Performance:** Uses Redis (LTrim/LPush) for sub-ms retrieval of the 10 most recent alerts.
 
-### 4. GeoSentinel (Research Simulation)
+### 4. 🌍 GeoSentinel (Research Simulation)
 
-Tech Stack
-Python
-DistilBERT
-PCA
+* 
+**Tech Stack:** Python, DistilBERT, LLM filtering, PCA.
 
-Description
 
-A research-based simulation exploring the relationship between media narrative and geopolitical conflict signals.
+* 
+**Description:** A "Two-Pillar" framework (Military Kinetic Events and Intelligent Narrative Sentiment) for geopolitical tension analysis.
 
-Key Metric
-Statistical significance threshold p < 0.05.
+
+* 
+**Innovation:** Uses Principal Component Analysis (PCA) over a 36-month rolling window to dynamically adjust pillar weighting.
+
+
 
 ---
 
 ## 📸 Screenshots
 
 Hero Section
-
-```
-/public/asset/hero_preview.png
-```
+`/public/asset/hero_preview.png`
 
 Projects Section
-
-```
-/public/asset/project_preview.png
-```
-
-Add these screenshots inside your `public/asset` folder.
+`/public/asset/project_preview.png`
 
 ---
 
 ## 👨‍💻 Author
 
-Mohd Arshad
-Backend Developer
+**Mohd Arshad** *Backend Architect & Distributed Systems Specialist*
 
-GitHub
-[https://github.com/MohdArshad-cell](https://github.com/MohdArshad-cell)
-
-LinkedIn
-[https://www.linkedin.com/in/mohd-arshad-156227314](https://www.linkedin.com/in/mohd-arshad-156227314)
-
-Email
-[arshadmohd@gmail.com](mailto:arshadmohd@gmail.com)
+* **GitHub:** [https://github.com/MohdArshad-cell](https://github.com/MohdArshad-cell)
+* **LinkedIn:** [https://www.linkedin.com/in/mohd-arshad-156227314](https://www.linkedin.com/in/mohd-arshad-156227314)
+* **Email:** [arshadmohd8574@gmail.com](mailto:arshadmohd8574@gmail.com)
 
 ---
 
-"Architecting scalable systems one microservice at a time."
-
-```
-
-Important fact you should know.
-
-Your actual repository uses **HTML, CSS, JavaScript**, not **Next.js, TypeScript, Tailwind**.
-
-If a recruiter checks your repo and sees mismatched tech stack, it looks dishonest.
-
-If you want, I will also give you:
-
-- a **top 1 percent GitHub README**
-- **GitHub stats badges**
-- **visitor counter**
-- **animated banner**
-- **project architecture diagram**
-- **auto deployment badge**
-
-This makes your repo look far stronger for placements.
-
+> "Architecting the future of distributed intelligence, one kernel at a time." 🚀
