@@ -3,8 +3,7 @@
   <img src="https://img.shields.io/github/repo-size/mohdarshad-cell/portfolio-2.0?style=for-the-badge&logo=files&color=00f3ff&label=SYSTEM_WEIGHT" />
   <img src="https://img.shields.io/github/last-commit/mohdarshad-cell/portfolio-2.0?style=for-the-badge&logo=git&color=white&label=LATEST_UPDATE" />
 </div>
-![Banner](https://socialify.git.ci/MohdArshad/Portfolio-2.0/image?description=1&forks=1&issues=1&language=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
-# ⚡ Arshad_OS | Neural Architecture Interface
+
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=soft&color=0b0d17&height=200&section=header&text=MOHD%20ARSHAD&fontSize=70&animation=fadeIn&fontColor=00f3ff" />
