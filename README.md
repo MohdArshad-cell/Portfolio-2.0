@@ -1,5 +1,5 @@
 <p align="center">
-  ![Banner](https://socialify.git.ci/![repo_path](https://github.com/MohdArshad-cell/Portfolio-2.0)/network?theme=Dark)
+  ![Banner](https://socialify.git.ci/MohdArshad-cell/Portfolio-2.0/image?theme=Dark)
 </p>
 
 # Arshad_OS: Neural Interface & Portfolio
