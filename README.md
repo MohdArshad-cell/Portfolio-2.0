@@ -160,8 +160,8 @@ For inquiries or collaborations, please connect via:
 *   **Name:** Mohd Arshad
 *   **Role:** Backend Architect & Systems Engineer
 *   **Location:** 📍 Lucknow, India
-*   **Email:** 📧 `[contact.arshad@example.com]` (Placeholder - Actual email available upon request)
-*   **WhatsApp:** 📱 `[+91-XXXXXXXXXX]` (Placeholder - Actual number available upon request)
+*   **Email:** 📧 `[arshadmohd8574@gmail.com]` 
+*   **WhatsApp:** 📱 `[+91-7887096421]`
 
 ---
 
