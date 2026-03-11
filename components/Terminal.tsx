@@ -127,10 +127,13 @@ export default function Terminal() {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     onClick={() => setIsOpen(true)}
-    // Use !fixed and !bottom-24 to override any parent constraints
-    className="!fixed !bottom-24 !right-8 z-[999] flex items-center gap-3 px-8 py-4 bg-[#05060a]/90 backdrop-blur-md border border-[#00f3ff]/50 text-[#00f3ff] font-mono text-[10px] uppercase tracking-[0.3em] group pointer-events-auto shadow-[0_0_30px_rgba(0,243,255,0.1)]"
+    // 🔴 ADDED: h-[52px] (consistent height) and overflow-hidden (clips the cyan block)
+    className="!fixed !bottom-24 !right-8 z-[999] h-[52px] flex items-center gap-3 px-8 bg-[#05060a]/90 backdrop-blur-md border border-[#00f3ff]/50 text-[#00f3ff] font-mono text-[10px] uppercase tracking-[0.3em] group pointer-events-auto overflow-hidden shadow-[0_0_30px_rgba(0,243,255,0.1)] rounded-none"
   >
-    <div className="absolute inset-0 bg-[#00f3ff] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300" />
+    {/* The sliding background: Ensure it's exactly the same size as the button */}
+    <div className="absolute inset-0 bg-[#00f3ff] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0" />
+    
+    {/* Icons and Text: Need higher z-index to stay above the sliding cyan background */}
     <Zap size={14} className="relative z-10 group-hover:text-black transition-colors" />
     <span className="relative z-10 group-hover:text-black transition-colors font-black">
       Initialise_Kernel
