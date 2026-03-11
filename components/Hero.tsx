@@ -10,11 +10,12 @@ export default function Hero() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Distributed_Kafka_Pipelines...",
-        "Neural_AI_Orchestration...", 
-        "High-Concurrency_Engines...",
-        "Fault-Tolerant_Microservices...",
-      ],
+  "Kafka_Systems...",
+  "Neural_Loops...", 
+  "High_TPS_Core...",
+  "Fault_Tolerance...",
+  "Cloud_Infra...",
+],
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 2000,
@@ -64,10 +65,12 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="text-lg md:text-2xl text-gray-400 font-mono mb-10 flex flex-wrap items-center gap-3 min-h-[1.5em] border-l-4 border-[#00f3ff] pl-6">
-            <span className="text-[#00f3ff] font-black uppercase tracking-tighter">Architecting_</span>
-            <span ref={el} className="text-white"></span>
-          </div>
+          <div className="text-sm md:text-2xl text-gray-400 font-mono mb-10 flex items-center gap-3 min-h-[1.5em] border-l-4 border-[#00f3ff] pl-6 whitespace-nowrap overflow-hidden">
+  <span className="text-[#00f3ff] font-black uppercase tracking-tighter flex-shrink-0">
+    Architecting_
+  </span>
+  <span ref={el} className="text-white truncate"></span>
+</div>
 
           <p className="text-gray-400 leading-relaxed text-base md:text-lg max-w-xl mb-12 font-medium">
             Backend Architect focused on building the high-frequency systems of the next decade. 

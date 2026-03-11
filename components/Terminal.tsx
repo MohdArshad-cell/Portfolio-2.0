@@ -124,17 +124,15 @@ export default function Terminal() {
       {/* 1. BOOT TRIGGER: Added Glow & Hover Scale */}
       {!isOpen && (
   <motion.button
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 1, scale: 1 }}
-    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0,243,255,0.4)" }}
-    whileTap={{ scale: 0.95 }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
     onClick={() => setIsOpen(true)}
-    // 🔴 THE FIX: Use fixed, high z-index, and bottom-20 to stay above StatusBar
-    className="fixed bottom-20 right-8 z-[100] flex items-center gap-3 px-8 py-4 bg-black/80 backdrop-blur-md border border-[#00f3ff]/50 text-[#00f3ff] font-mono text-[10px] uppercase tracking-[0.3em] rounded-none overflow-hidden group pointer-events-auto"
+    // Use !fixed and !bottom-24 to override any parent constraints
+    className="!fixed !bottom-24 !right-8 z-[999] flex items-center gap-3 px-8 py-4 bg-[#05060a]/90 backdrop-blur-md border border-[#00f3ff]/50 text-[#00f3ff] font-mono text-[10px] uppercase tracking-[0.3em] group pointer-events-auto shadow-[0_0_30px_rgba(0,243,255,0.1)]"
   >
     <div className="absolute inset-0 bg-[#00f3ff] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300" />
     <Zap size={14} className="relative z-10 group-hover:text-black transition-colors" />
-    <span className="relative z-10 group-hover:text-black transition-colors font-black uppercase">
+    <span className="relative z-10 group-hover:text-black transition-colors font-black">
       Initialise_Kernel
     </span>
   </motion.button>
