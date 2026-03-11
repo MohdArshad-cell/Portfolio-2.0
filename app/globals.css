@@ -54,3 +54,22 @@ body {
     text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
   }
 }
+
+@layer utilities {
+  .terminal-glow {
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.1), inset 0 0 10px rgba(0, 243, 255, 0.05);
+    border-color: rgba(0, 243, 255, 0.4);
+  }
+
+  /* Bonus: Add a subtle flicker for that real CRT feel */
+  .terminal-flicker {
+    animation: flicker 0.15s infinite;
+  }
+
+  @keyframes flicker {
+    0% { opacity: 0.97; }
+    50% { opacity: 1; }
+    100% { opacity: 0.98; }
+  }
+}
