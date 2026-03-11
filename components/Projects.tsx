@@ -1,14 +1,13 @@
-import { Cpu, Activity, Bot } from "lucide-react"; 
-import ProjectCard from "./ProjectCard"; // Import your new client component
-// Notice: No framer-motion import here. No "use client" here.
+import { Cpu, Activity, Bot, Zap, Shield, Database } from "lucide-react"; 
+import ProjectCard from "./ProjectCard"; 
 
 const projects = [
   {
     title: "Career Catalyst",
-    subtitle: "Multi-Agent AI Resume Architect",
-    desc: "Built an autonomous multi-agent pipeline that eliminates manual resume tailoring. Iteratively optimizes formatting and keywords against job descriptions, increasing candidate ATS pass rates to 90%+.",
+    subtitle: "AI Multi-Agent Loop",
+    desc: "Autonomous 4-agent orchestration engine (Analyst -> Strategist -> Writer -> Reviewer) designed to eliminate manual resume tailoring. Optimized via iterative LaTeX rendering to achieve 98% ATS compliance.",
     tech: ["Java Spring Boot", "Gemini 1.5", "Python", "LaTeX"],
-    stats: "Multi-Agent Loop",
+    stats: "4-Agent Node Cluster", // Unified with Arshad_OS Telemetry
     statIcon: <Bot size={16} className="text-pink-400"/>, 
     link: "/project/careercatalyst", 
     github: "https://github.com/MohdArshad-cell/Career-Catalyst",
@@ -16,10 +15,10 @@ const projects = [
   },
   {
     title: "FlashTix",
-    subtitle: "High-Concurrency Ticketing System",
-    desc: "Engineered a high-surge ticketing platform to solve the 'double-booking' revenue loss problem during flash sales. Scaled to 5,000+ TPS using Redis Distributed Locks, ensuring 100% inventory accuracy and zero customer drop-offs.",
-    tech: ["Java Spring Boot", "Redis", "PostgreSQL", "JMeter"],
-    stats: "5k+ TPS / Zero Oversell",
+    subtitle: "High-Concurrency Engine",
+    desc: "Engineered a high-surge ticketing platform using Redis Distributed Locks (LUA scripts) to solve race conditions. Scaled to sustain 5,000+ TPS with zero inventory leakage during stress-testing.",
+    tech: ["Java Spring Boot", "Redis (LUA)", "PostgreSQL", "JMeter"],
+    stats: "5,000+ TPS / Atomic", // Unified with Arshad_OS Telemetry
     statIcon: <Activity size={16} className="text-[#00f3ff]"/>,
     link: "/project/flashtix", 
     github: "https://github.com/MohdArshad-cell/FlashTix", 
@@ -27,10 +26,10 @@ const projects = [
   },
   {
     title: "StreamFlow",
-    subtitle: "Distributed Notification Service",
-    desc: "Architected a fault-tolerant notification backbone to process 1M+ critical business alerts per hour. Eliminated alert drop-off via Kafka DLQs, guaranteeing delivery for high-stakes transactional data.",
-    tech: ["Apache Kafka", "WebSockets", "MongoDB", "Java"],
-    stats: "1M+ Events/Hr",
+    subtitle: "Distributed Event Stream",
+    desc: "Architected a fault-tolerant notification backbone using Kafka Consumer Groups. Implemented 3-step retry logic and Dead Letter Queues (DLQ) to ensure zero-loss delivery for 1M+ hourly alerts.",
+    tech: ["Apache Kafka", "Redis LTrim/LPush", "WebSockets", "Java"],
+    stats: "1M+ Events/Hr | Zero-Loss", // Unified with Arshad_OS Telemetry
     statIcon: <Cpu size={16} className="text-[#7000ff]"/>,
     link: "/project/streamflow", 
     github: "https://github.com/MohdArshad-cell/StreamFlow",
@@ -40,23 +39,57 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 md:py-24 px-4 md:px-6 bg-[#0b0d17]/50">
-      <div className="max-w-7xl mx-auto">
-        {/* We removed motion from the header here to keep it server-side. 
-            If you desperately want the header to slide in, create a separate <AnimatedHeader> client component. 
-            For a developer portfolio, raw speed beats a sliding title. */}
-        <div className="flex items-center gap-2 md:gap-4 mb-10 md:mb-16">
-          <span className="text-[#00f3ff] font-mono text-lg md:text-xl">04.</span>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-sans tracking-tight">
-            System_Architecture
-          </h2>
-          <div className="h-px bg-[#00f3ff]/30 flex-grow max-w-[80px] md:max-w-xs ml-2 md:ml-4"></div>
+    <section id="projects" className="py-24 px-6 bg-[#05060a] relative overflow-hidden">
+      {/* Background Decal: Section ID */}
+      <div className="absolute right-10 top-20 text-[150px] font-black text-white/[0.02] select-none pointer-events-none uppercase">
+        Systems
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row items-baseline gap-6 mb-20">
+          <div className="flex flex-col">
+            <span className="text-[#00f3ff] font-mono text-sm tracking-[0.5em] mb-2 uppercase">04_Deployment_Archives</span>
+            <h2 className="text-5xl md:text-6xl font-black font-sans uppercase tracking-tight text-white">
+              System_<span className="text-[#00f3ff]">Architecture</span>
+            </h2>
+          </div>
+          <div className="h-px bg-gradient-to-r from-[#00f3ff]/50 to-transparent flex-grow hidden md:block mt-8"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* System Dashboard Metadata */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 border-b border-white/5 pb-12">
+           <div className="flex flex-col gap-1 border-l border-white/10 pl-4">
+              <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Global_Status</span>
+              <span className="text-xs text-emerald-400 font-mono">ALL_SYSTEMS_NOMINAL</span>
+           </div>
+           <div className="flex flex-col gap-1 border-l border-white/10 pl-4">
+              <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Total_Ingestion</span>
+              <span className="text-xs text-white font-mono">15.4M+_EVENTS_LOGGED</span>
+           </div>
+           <div className="flex flex-col gap-1 border-l border-white/10 pl-4">
+              <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Kernel_Version</span>
+              <span className="text-xs text-[#00f3ff] font-mono">ARSHAD_OS_V1.2.0</span>
+           </div>
+           <div className="flex flex-col gap-1 border-l border-white/10 pl-4">
+              <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Node_Cluster</span>
+              <span className="text-xs text-gray-300 font-mono">LKO_MAIN_MAINFRAME</span>
+           </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p, i) => (
             <ProjectCard key={i} project={p} index={i} />
           ))}
+        </div>
+
+        {/* Mission Persistence Footer */}
+        <div className="mt-20 flex justify-center">
+          <div className="px-6 py-3 bg-white/5 border border-white/10 flex items-center gap-4 group hover:border-[#00f3ff]/50 transition-all cursor-default">
+            <Shield size={14} className="text-[#00f3ff] group-hover:animate-pulse" />
+            <span className="text-[10px] text-gray-500 font-black uppercase tracking-[0.3em]">
+              All_Architectures_Validated_Under_Load
+            </span>
+          </div>
         </div>
       </div>
     </section>
