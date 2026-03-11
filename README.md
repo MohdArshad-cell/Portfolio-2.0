@@ -2,7 +2,7 @@
 
 ![Banner](https://socialify.git.ci/MohdArshad-cell/Portfolio-2.0/image?description=1&forks=1&issues=1&language=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
 
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini%201.5-7000ff?style=for-the-badge&logo=google-gemini&logoColor=white) ![Neural_Agents](https://img.shields.io/badge/Multi--Agent-00f3ff?style=for-the-badge&logo=target)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini%202.5-7000ff?style=for-the-badge&logo=google-gemini&logoColor=white) ![Neural_Agents](https://img.shields.io/badge/Multi--Agent-00f3ff?style=for-the-badge&logo=target)
 
 ![Next.js](https://img.shields.io/badge/Next.js%2015-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
