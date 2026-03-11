@@ -13,7 +13,7 @@ export default function Research() {
           className="flex items-center gap-6 mb-16"
         >
           <div className="flex flex-col">
-            <span className="text-emerald-400 font-mono text-sm tracking-[0.5em] mb-2 uppercase">03_Scientific_Research</span>
+            <span className="text-emerald-400 font-mono text-sm tracking-[0.5em] mb-2 uppercase">05_Scientific_Research</span>
             <h2 className="text-5xl md:text-6xl font-black font-sans uppercase tracking-tight text-white">
               Geo<span className="text-emerald-400">Sentinel</span>_Analysis
             </h2>
