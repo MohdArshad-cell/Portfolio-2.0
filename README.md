@@ -35,12 +35,6 @@ Auditory Confirmation: Integrated native Audio API triggers for a "System_Unlock
 
 Telemetry HUD: A real-time monitoring side-panel in the terminal that parses JSON metadata from the AI to display project throughput and latency (e.g., FlashTix 5,000+ TPS).
 
-Component,Logic Protocol,Architectural Responsibility
-BootScreen.tsx,Diagnostic Loop,Executes sequential logging of 2026 career milestones.
-Terminal.tsx,Neural Handshake,Orchestrates Multi-Agent logic and Telemetry HUD parsing.
-Experience.tsx,Mission_Log,Documents HireEase scaling and TCS onboarding protocols.
-Research.tsx,Briefing_Protocol,Validates the GeoSentinel Granger Causal link (p < 0.05).
-StatusBar.tsx,Network_Intel,Real-time IP-API geospatial tracking and UTC synchronization.
 
 | Technology | Version | Key Responsibility |
 | :--- | :--- | :--- |
