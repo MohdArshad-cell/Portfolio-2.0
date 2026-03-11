@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, Terminal, ArrowRight, ShieldCheck } from "lucide-react";
+import { Mail, Linkedin, Github, ArrowRight, ShieldCheck } from "lucide-react";
 
 export default function Contact() {
-  const currentYear = 2026; // System_Sync
+  const currentYear = 2026;
 
   return (
     <footer id="contact" className="py-24 px-6 border-t border-white/5 bg-[#05060a] relative overflow-hidden">
@@ -45,15 +45,10 @@ export default function Contact() {
               <span>SEND_ENCRYPTED_PACKET</span>
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
             </a>
-
-            <div className="hidden md:flex items-center gap-4 text-gray-700 font-mono text-[10px] uppercase tracking-[0.3em]">
-               <ArrowRight size={14} />
-               <span>Available_for_Deployment_2026</span>
-            </div>
           </div>
 
           {/* Social Cluster */}
-          <div className="flex justify-center gap-10 text-gray-500 mb-24">
+          <div className="flex justify-center gap-10 text-gray-500 mb-20">
             <a 
               href="https://github.com/MohdArshad-cell" 
               target="_blank" 
@@ -73,24 +68,8 @@ export default function Contact() {
               <Linkedin size={28} />
             </a>
           </div>
-          
-          {/* Strategic Roadmap Sub-Footer */}
-          <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-white/5 text-left">
-             <div className="space-y-3">
-                <span className="text-[9px] font-black text-gray-600 uppercase tracking-widest block">Phase_01</span>
-                <p className="text-[11px] text-gray-400 font-mono uppercase">TCS_Xplore: Training_Initiated [March 2026]</p>
-             </div>
-             <div className="space-y-3">
-                <span className="text-[9px] font-black text-gray-600 uppercase tracking-widest block">Phase_02</span>
-                <p className="text-[11px] text-gray-400 font-mono uppercase">HireEase: Scaling_AI_Agents [Active]</p>
-             </div>
-             <div className="space-y-3">
-                <span className="text-[9px] font-black text-gray-600 uppercase tracking-widest block">Phase_03</span>
-                <p className="text-[11px] text-emerald-400 font-mono uppercase">Target: Senior_Systems_Lead [2027]</p>
-             </div>
-          </div>
 
-          <div className="mt-20 flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4">
             <div className="flex items-center gap-2 text-[10px] font-mono text-gray-600 uppercase tracking-[0.5em]">
                <ShieldCheck size={12} className="text-[#00f3ff]/40" />
                Mohd_Arshad © {currentYear}
