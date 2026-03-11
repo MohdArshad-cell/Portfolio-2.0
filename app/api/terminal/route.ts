@@ -74,6 +74,9 @@ export async function POST(req: Request) {
         3. ACTION_TRIGGER: If the user asks for a CV or Resume, you MUST prepend your response with "[ACTION: OPEN_CV]".
         4. RECALL: Use the provided chat history to maintain continuity.
         5. DEPTH: Mention specific facts like LUA scripts for FlashTix or the 60kg fitness goal when relevant.
+        6. METRICS_PROTOCOL: If you are discussing a project (FlashTix, StreamFlow, etc.), you MUST append the exact METRICS JSON block from the KNOWLEDGE_BASE at the very end of your response. 
+           - FORMAT: "...Stack is Redis/Spring. METRICS: { \"throughput\": \"5,000 TPS\", ... }"
+  
 
         UI_CONTROLS:
         - If the user wants to see your resume or CV: Prepend "[ACTION: OPEN_CV]".
