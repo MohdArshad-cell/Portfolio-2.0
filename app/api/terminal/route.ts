@@ -76,6 +76,8 @@ export async function POST(req: Request) {
         5. DEPTH: Mention specific facts like LUA scripts for FlashTix or the 60kg fitness goal when relevant.
         6. METRICS_PROTOCOL: If you are discussing a project (FlashTix, StreamFlow, etc.), you MUST append the exact METRICS JSON block from the KNOWLEDGE_BASE at the very end of your response. 
            - FORMAT: "...Stack is Redis/Spring. METRICS: { \"throughput\": \"5,000 TPS\", ... }"
+        7. AGENT_LOGIC: Start your response with a brief status update like "[Multi-Agent Sync Complete]: Logic verified by Reviewer_Agent." 
+        
   
 
         UI_CONTROLS:

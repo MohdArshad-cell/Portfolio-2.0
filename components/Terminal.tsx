@@ -1,9 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ShieldCheck, Activity, Cpu, Terminal as TerminalIcon, ExternalLink, Zap, BarChart3 } from "lucide-react";
+import { X, ShieldCheck, Activity, Cpu, Terminal as TerminalIcon, Zap, BarChart3, Binary } from "lucide-react";
 
-// Types for the Telemetry Data
 interface Metrics {
   throughput?: string;
   latency?: string;
@@ -25,6 +24,10 @@ export default function Terminal() {
   const [isThinking, setIsThinking] = useState(false);
   const [activeMetrics, setActiveMetrics] = useState<Metrics | null>(null);
   
+  // MULTI-AGENT STATE
+  const [isDelegating, setIsDelegating] = useState(false);
+  const [currentAgent, setCurrentAgent] = useState("");
+
   const [chatHistory, setChatHistory] = useState<{ role: 'user' | 'model', parts: { text: string }[] }[]>([]);
   const [displayHistory, setDisplayHistory] = useState([
     { role: "system", text: "ARSHAD_OS [Version 1.2.0.442]" },
@@ -36,19 +39,31 @@ export default function Terminal() {
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [displayHistory, isThinking]);
+  }, [displayHistory, isThinking, isDelegating]);
 
-  // Utility to extract metrics from AI response text
+  // Updated Regex for ES2020 compatibility
   const extractMetrics = (text: string): Metrics | null => {
-    const match = text.match(/METRICS:\s*({.*?})/s);
+    const match = text.match(/METRICS:\s*({[\s\S]*?})/);
     if (match) {
-      try {
-        return JSON.parse(match[1]);
-      } catch (e) {
-        return null;
-      }
+      try { return JSON.parse(match[1]); } catch (e) { return null; }
     }
     return null;
+  };
+
+  // Simulation of the Multi-Agent Loop
+  const simulateMultiAgentWork = async () => {
+    const agents = [
+      "Analyst_Agent: Scanning query intent...",
+      "Architect_Agent: Retrieving technical context...",
+      "Logic_Agent: Cross-referencing 2026 milestones...",
+      "Reviewer_Agent: Validating response integrity..."
+    ];
+    setIsDelegating(true);
+    for (const agent of agents) {
+      setCurrentAgent(agent);
+      await new Promise(resolve => setTimeout(resolve, 600)); 
+    }
+    setIsDelegating(false);
   };
 
   const handleCommand = async (e: React.KeyboardEvent) => {
@@ -56,7 +71,10 @@ export default function Terminal() {
       const cmd = input.trim();
       setDisplayHistory(prev => [...prev, { role: "user", text: cmd }]);
       setInput("");
+      
+      // Start Multi-Agent Handshake
       setIsThinking(true);
+      await simulateMultiAgentWork();
 
       try {
         const res = await fetch("/api/terminal", {
@@ -72,19 +90,14 @@ export default function Terminal() {
         if (rawResponse.includes("[ACTION: OPEN_CV]")) {
           window.open("https://raw.githubusercontent.com/MohdArshad-cell/Portfolio-2.0/a2f4520ab852250d17e0b8a3e11df4a2eab1eaff/public/asset/ARSHAD.pdf", '_blank');
         }
-        if (rawResponse.includes("[ACTION: SCROLL_PROJECTS]")) {
-          document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-        }
-        if (rawResponse.includes("[ACTION: OPEN_LINKEDIN]")) {
-          window.open("https://www.linkedin.com/in/mohd-arshad-156227314", '_blank');
-        }
 
-        // TELEMETRY_HUD: Update side panel metrics if project is discussed
         const metrics = extractMetrics(rawResponse);
         setActiveMetrics(metrics);
 
-        // CLEAN_DISPLAY: Remove technical tags and JSON from user view
-        const displayResponse = rawResponse.replace(/\[ACTION: .*?\]/g, "").replace(/METRICS:\s*{.*?}/s, "").trim();
+        const displayResponse = rawResponse
+          .replace(/\[ACTION: .*?\]/g, "")
+          .replace(/METRICS:\s*{[\s\S]*?}/, "")
+          .trim();
 
         setDisplayHistory(prev => [
           ...prev, 
@@ -125,7 +138,7 @@ export default function Terminal() {
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              className="relative w-full md:w-[800px] h-[85vh] md:h-[650px] bg-[#0b0d17] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.9)] flex flex-col font-mono rounded-lg overflow-hidden backdrop-blur-xl pointer-events-auto"
+              className="relative w-full md:w-[850px] h-[85vh] md:h-[650px] bg-[#0b0d17] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.9)] flex flex-col font-mono rounded-lg overflow-hidden backdrop-blur-xl pointer-events-auto"
             >
               {/* Telemetry HUD Panel */}
               <AnimatePresence>
@@ -140,23 +153,17 @@ export default function Terminal() {
                       <BarChart3 size={14} />
                       <span className="text-[10px] font-black uppercase tracking-widest">Live_Telemetry</span>
                     </div>
-                    
                     {Object.entries(activeMetrics).map(([key, value]) => (
                       key !== 'stack' && (
                         <div key={key} className="space-y-1">
                           <div className="text-[9px] text-gray-500 uppercase font-bold">{key.replace('_', ' ')}</div>
                           <div className="text-sm text-white font-black font-mono tracking-tight">{value}</div>
                           <div className="h-[2px] w-full bg-white/5 overflow-hidden">
-                            <motion.div 
-                              initial={{ x: "-100%" }} 
-                              animate={{ x: "0%" }} 
-                              className="h-full w-full bg-[#00f3ff]/40" 
-                            />
+                            <motion.div initial={{ x: "-100%" }} animate={{ x: "0%" }} className="h-full w-full bg-[#00f3ff]/40" />
                           </div>
                         </div>
                       )
                     ))}
-                    
                     <div className="mt-auto pt-6 border-t border-white/5">
                       <div className="text-[9px] text-gray-500 uppercase font-bold mb-1">Architecture_Stack</div>
                       <div className="text-[10px] text-[#00f3ff] font-bold">{activeMetrics.stack}</div>
@@ -176,16 +183,14 @@ export default function Terminal() {
                     NODE: ARSHAD_V1.1_MAINFRAME
                   </div>
                 </div>
-                <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-red-500 transition-all hover:rotate-90 p-1">
-                  <X size={20} />
-                </button>
+                <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-red-500 transition-all p-1"><X size={20} /></button>
               </div>
 
-              {/* Content Area */}
+              {/* Main Content */}
               <div className="flex-1 flex overflow-hidden bg-gradient-to-b from-[#0d101b] to-[#0b0d17]">
-                <div className="hidden lg:flex w-12 flex-col items-center py-8 border-r border-white/5 bg-[#080a12] text-[8px] text-gray-700 font-black select-none tracking-[0.5em]">
+                <div className="hidden lg:flex w-12 flex-col items-center py-8 border-r border-white/5 bg-[#080a12] text-[8px] text-gray-700 font-black tracking-[0.5em]">
                   <div className="rotate-90 origin-center whitespace-nowrap mb-24">SYSTEM_STATUS_200</div>
-                  <div className="rotate-90 origin-center whitespace-nowrap text-[#00f3ff]/30">CORE_SYNC_ACTIVE</div>
+                  <div className="rotate-90 origin-center whitespace-nowrap text-[#00f3ff]/30">AGENT_ORCHESTRATION</div>
                 </div>
 
                 <div className="flex-1 p-8 overflow-y-auto scrollbar-thin scrollbar-thumb-[#00f3ff]/10 space-y-8 pr-[40px]">
@@ -201,28 +206,32 @@ export default function Terminal() {
                     </div>
                   ))}
                   
-                  {isThinking && (
+                  {/* MULTI-AGENT HANDSHAKE UI */}
+                  {isDelegating && (
+                    <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} className="p-4 bg-[#00f3ff]/5 border-l-2 border-[#00f3ff] flex items-center gap-4">
+                      <Binary size={14} className="text-[#00f3ff] animate-pulse" />
+                      <span className="text-[10px] text-[#00f3ff] font-black uppercase tracking-[0.2em]">{currentAgent}</span>
+                    </motion.div>
+                  )}
+
+                  {isThinking && !isDelegating && (
                     <div className="flex items-center gap-4 text-[#00f3ff] text-[10px] font-black tracking-widest py-4">
                       <Activity size={16} className="animate-spin" />
-                      <span className="animate-pulse">KERNEL_SYNCHRONIZING_MODULES...</span>
+                      <span className="animate-pulse">FINALIZING_RESPONSE_KERNEL...</span>
                     </div>
                   )}
                   <div ref={messagesEndRef} />
                 </div>
               </div>
 
-              {/* Input Area */}
+              {/* Input */}
               <div className="p-6 bg-[#080a12] border-t border-white/10 flex items-center gap-5">
-                <span className="text-[#00f3ff] text-xs font-black tracking-tighter">SYS_ROOT:~$</span>
+                <span className="text-[#00f3ff] text-xs font-black">SYS_ROOT:~$</span>
                 <input
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={handleCommand}
-                  disabled={isThinking}
-                  placeholder={isThinking ? "AWAITING_KERNEL..." : "Enter technical query..."}
-                  className="flex-1 bg-transparent border-none outline-none text-white placeholder-gray-700 text-sm font-bold"
-                  autoFocus
+                  type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleCommand}
+                  disabled={isThinking || isDelegating}
+                  placeholder={isDelegating ? "AGENTS_WORKING..." : "Enter technical query..."}
+                  className="flex-1 bg-transparent border-none outline-none text-white placeholder-gray-700 text-sm font-bold" autoFocus
                 />
               </div>
             </motion.div>
