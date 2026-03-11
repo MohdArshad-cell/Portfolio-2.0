@@ -1,6 +1,6 @@
-# Elite Portfolio System 2.0
+# Arshad_OS v1.2.0: Neural Interface & Systems Archive
 
-![Banner](https://socialify.git.ci/MohdArshad-cell/Portfolio-2.0/network?theme=Dark)
+![Banner](https://socialify.git.ci/MohdArshad-cell/Portfolio-2.0/image?description=1&forks=1&issues=1&language=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
 
 <!-- Badges start -->
 ![Google Generative AI](https://img.shields.io/badge/Google%20Generative%20AI-blue?style=flat-square) ![Autoprefixer](https://img.shields.io/badge/Autoprefixer-blue?style=flat-square) ![Clsx](https://img.shields.io/badge/Clsx-blue?style=flat-square) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-blue?style=flat-square) ![Lucide React](https://img.shields.io/badge/Lucide%20React-blue?style=flat-square) ![Next.js](https://img.shields.io/badge/Next.js-blue?style=flat-square) ![React](https://img.shields.io/badge/React-blue?style=flat-square) ![React DOM](https://img.shields.io/badge/React%20DOM-blue?style=flat-square) ![React Medium Image Zoom](https://img.shields.io/badge/React%20Medium%20Image%20Zoom-blue?style=flat-square) ![Tailwind Merge](https://img.shields.io/badge/Tailwind%20Merge-blue?style=flat-square) ![Typed.js](https://img.shields.io/badge/Typed.js-blue?style=flat-square) ![Tailwindcss Postcss](https://img.shields.io/badge/Tailwindcss%20Postcss-blue?style=flat-square) ![Testing Library DOM](https://img.shields.io/badge/Testing%20Library%20DOM-blue?style=flat-square) ![Testing Library Jest DOM](https://img.shields.io/badge/Testing%20Library%20Jest%20DOM-blue?style=flat-square) ![Testing Library React](https://img.shields.io/badge/Testing%20Library%20React-blue?style=flat-square) ![Types Jest](https://img.shields.io/badge/Types%20Jest-blue?style=flat-square) ![Types Node](https://img.shields.io/badge/Types%20Node-blue?style=flat-square) ![Types React](https://img.shields.io/badge/Types%20React-blue?style=flat-square) ![Types React DOM](https://img.shields.io/badge/Types%20React%20DOM-blue?style=flat-square) ![Baseline Browser Mapping](https://img.shields.io/badge/Baseline%20Browser%20Mapping-blue?style=flat-square) ![ESLint](https://img.shields.io/badge/ESLint-blue?style=flat-square) ![ESLint Config Next](https://img.shields.io/badge/ESLint%20Config%20Next-blue?style=flat-square) ![Jest](https://img.shields.io/badge/Jest-blue?style=flat-square) ![Jest Environment JSDOM](https://img.shields.io/badge/Jest%20Environment%20JSDOM-blue?style=flat-square) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-blue?style=flat-square) ![TS Node](https://img.shields.io/badge/TS%20Node-blue?style=flat-square) ![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=flat-square)
@@ -10,15 +10,31 @@
 
 ## Executive Summary
 
-This project delivers a highly interactive, performant, and aesthetically rich frontend application, engineered to showcase a developer's portfolio. Leveraging cutting-edge web technologies, it provides a seamless user experience, incorporating dynamic content, intuitive navigation, and an engaging visual narrative.
+Arshad_OS is not a portfolio; it is a proprietary Neural Interface designed to simulate a high-performance operating system. It serves as the primary technical dossier for Mohd Arshad, a Systems Architect and Backend Engineer based in Lucknow, India.
 
-Functionally, the system acts as a digital manifestation of a technical persona, integrating a comprehensive knowledge base with real-time status updates and strategic personal intel. It features a unique, AI-powered interactive terminal, allowing users to deeply engage with the project creator's background, achievements, and ambitious vision for engineering excellence and billionaire status.
+As of March 2026, this system documents a trajectory of extreme technical growth, including the co-founding of HireEase (formerly AplyEase) and the successful procurement of a TCS Ninja engagement. The architecture is engineered to demonstrate mastery over high-concurrency distributed systems, autonomous AI orchestration, and fault-tolerant microservices.
 
 
 
 ## Architecture & Tech Stack
 
-The Elite Portfolio System 2.0 is built upon a robust, modern frontend architecture, primarily driven by Node.js and TypeScript, with Next.js providing a powerful full-stack framework for server-side rendering and static site generation capabilities.
+The v1.2.0 deployment introduces the Empire-Grade Intelligence Layer, moving beyond static data presentation into real-time system simulation.
+
+Key Technical Pillars:
+Multi-Agent Orchestration: A sophisticated terminal-driven loop using Gemini 1.5 Pro. It simulates a 4-agent handshake (Analyst, Architect, Reviewer, Logic) to process technical queries.
+
+Boot_Sequence_Diagnostics: A customized Next.js LayoutWrapper that executes a 2.5s system check of 2026 milestones (TCS Xplore, OCI Certifications) before granting access.
+
+Auditory Confirmation: Integrated native Audio API triggers for a "System_Unlock" chirp upon successful initialization.
+
+Telemetry HUD: A real-time monitoring side-panel in the terminal that parses JSON metadata from the AI to display project throughput and latency (e.g., FlashTix 5,000+ TPS).
+
+Component,Logic Protocol,Architectural Responsibility
+BootScreen.tsx,Diagnostic Loop,Executes sequential logging of 2026 career milestones.
+Terminal.tsx,Neural Handshake,Orchestrates Multi-Agent logic and Telemetry HUD parsing.
+Experience.tsx,Mission_Log,Documents HireEase scaling and TCS onboarding protocols.
+Research.tsx,Briefing_Protocol,Validates the GeoSentinel Granger Causal link (p < 0.05).
+StatusBar.tsx,Network_Intel,Real-time IP-API geospatial tracking and UTC synchronization.
 
 | Technology | Version | Key Responsibility |
 | :--- | :--- | :--- |
