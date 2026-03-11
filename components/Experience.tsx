@@ -5,7 +5,7 @@ import { Calendar, ArrowRight, ExternalLink, Briefcase, Target, Zap } from "luci
 const experiences = [
   {
     company: "HireEase", // Rebranded from AplyEase
-    website: "https://hireease.in", 
+    website: "https://hireease.me", 
     role: "Software Engineering Intern",
     date: "March 2025 — Present",
     status: "ACTIVE_MISSION",
