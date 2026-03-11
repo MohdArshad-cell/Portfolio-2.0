@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ShieldCheck, Activity, Cpu, Terminal as TerminalIcon, Zap, BarChart3, Binary } from "lucide-react";
+import { X, ShieldCheck, Activity, Cpu, Terminal as TerminalIcon, Zap, BarChart3, Binary,Command } from "lucide-react";
 
 interface Metrics {
   throughput?: string;
@@ -121,117 +121,108 @@ export default function Terminal() {
 
   return (
     <>
+      {/* 1. BOOT TRIGGER: Added Glow & Hover Scale */}
       {!isOpen && (
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-12 right-8 z-[60] flex items-center gap-3 px-6 py-3 bg-[#0b0d17] border border-[#00f3ff]/40 text-[#00f3ff] hover:bg-[#00f3ff] hover:text-black transition-all group font-mono text-[10px] uppercase tracking-[0.2em] shadow-[0_0_30px_rgba(0,243,255,0.1)] rounded-sm"
+          className="fixed bottom-12 right-8 z-[60] flex items-center gap-3 px-8 py-4 bg-black/80 backdrop-blur-md border border-[#00f3ff]/50 text-[#00f3ff] font-mono text-[10px] uppercase tracking-[0.3em] shadow-[0_0_50px_rgba(0,243,255,0.2)] rounded-none overflow-hidden group"
         >
-          <Zap size={14} className="group-hover:fill-current" />
-          <span className="font-black">Boot_Kernel</span>
-        </button>
+          <div className="absolute inset-0 bg-[#00f3ff] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300" />
+          <Zap size={14} className="relative z-10 group-hover:text-black transition-colors" />
+          <span className="relative z-10 group-hover:text-black transition-colors font-black">Initialise_Kernel</span>
+        </motion.button>
       )}
 
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 pointer-events-none">
+          <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-10 pointer-events-none">
+            {/* 2. MAIN CONTAINER: Added Glassmorphism and Heavy Shadow */}
             <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              className="relative w-full md:w-[850px] h-[85vh] md:h-[650px] bg-[#0b0d17] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.9)] flex flex-col font-mono rounded-lg overflow-hidden backdrop-blur-xl pointer-events-auto"
+              initial={{ opacity: 0, scale: 0.9, rotateX: 10 }}
+              animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+              exit={{ opacity: 0, scale: 0.9, rotateX: 10 }}
+              className="relative w-full max-w-5xl h-[85vh] bg-[#05060a]/95 border border-white/10 shadow-[0_0_100px_rgba(0,0,0,1)] flex flex-col font-mono rounded-none overflow-hidden backdrop-blur-3xl pointer-events-auto ring-1 ring-white/5"
             >
-              {/* Telemetry HUD Panel */}
-              <AnimatePresence>
-                {activeMetrics && (
-                  <motion.div
-                    initial={{ x: 300, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: 300, opacity: 0 }}
-                    className="absolute right-0 top-[65px] bottom-[77px] w-[260px] bg-[#080a12]/95 border-l border-white/10 z-10 p-6 flex flex-col gap-6 backdrop-blur-md hidden lg:flex"
-                  >
-                    <div className="flex items-center gap-2 text-[#00f3ff] mb-2">
-                      <BarChart3 size={14} />
-                      <span className="text-[10px] font-black uppercase tracking-widest">Live_Telemetry</span>
-                    </div>
-                    {Object.entries(activeMetrics).map(([key, value]) => (
-                      key !== 'stack' && (
-                        <div key={key} className="space-y-1">
-                          <div className="text-[9px] text-gray-500 uppercase font-bold">{key.replace('_', ' ')}</div>
-                          <div className="text-sm text-white font-black font-mono tracking-tight">{value}</div>
-                          <div className="h-[2px] w-full bg-white/5 overflow-hidden">
-                            <motion.div initial={{ x: "-100%" }} animate={{ x: "0%" }} className="h-full w-full bg-[#00f3ff]/40" />
-                          </div>
-                        </div>
-                      )
-                    ))}
-                    <div className="mt-auto pt-6 border-t border-white/5">
-                      <div className="text-[9px] text-gray-500 uppercase font-bold mb-1">Architecture_Stack</div>
-                      <div className="text-[10px] text-[#00f3ff] font-bold">{activeMetrics.stack}</div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {/* Scanline Overlay Layer */}
+              <div className="absolute inset-0 pointer-events-none opacity-[0.05] z-50 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,4px_100%]" />
 
-              {/* Header */}
-              <div className="flex items-center justify-between px-6 py-4 bg-[#111420]/80 border-b border-white/5">
-                <div className="flex items-center gap-8">
-                  <div className="flex items-center gap-2 text-[#00f3ff] animate-pulse">
-                    <ShieldCheck size={14} />
-                    <span className="text-[10px] font-black uppercase tracking-widest">Secure_Layer</span>
+              {/* 3. HEADER: High-Contrast Industrial Header */}
+              <div className="flex items-center justify-between px-8 py-5 bg-white/5 border-b border-white/10">
+                <div className="flex items-center gap-10">
+                  <div className="flex items-center gap-3">
+                    <div className="h-2 w-2 bg-[#00f3ff] rounded-full animate-pulse shadow-[0_0_10px_#00f3ff]" />
+                    <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#00f3ff]">Arshad_OS_V1.2</span>
                   </div>
-                  <div className="hidden sm:flex items-center gap-3 text-gray-500 border-l border-white/10 pl-8 font-black text-[9px]">
-                    NODE: ARSHAD_V1.1_MAINFRAME
+                  <div className="hidden lg:flex items-center gap-6 text-gray-500 border-l border-white/10 pl-10">
+                    <div className="flex flex-col">
+                      <span className="text-[8px] uppercase font-bold text-gray-600">Secure_Node</span>
+                      <span className="text-[10px] text-white font-bold">LKO_MAINFRAME_01</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[8px] uppercase font-bold text-gray-600">Auth_Status</span>
+                      <span className="text-[10px] text-[#00f3ff] font-bold">ROOT_ACCESS</span>
+                    </div>
                   </div>
                 </div>
-                <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-red-500 transition-all p-1"><X size={20} /></button>
+                <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-red-500 transition-all hover:rotate-90"><X size={20} /></button>
               </div>
 
-              {/* Main Content */}
-              <div className="flex-1 flex overflow-hidden bg-gradient-to-b from-[#0d101b] to-[#0b0d17]">
-                <div className="hidden lg:flex w-12 flex-col items-center py-8 border-r border-white/5 bg-[#080a12] text-[8px] text-gray-700 font-black tracking-[0.5em]">
-                  <div className="rotate-90 origin-center whitespace-nowrap mb-24">SYSTEM_STATUS_200</div>
-                  <div className="rotate-90 origin-center whitespace-nowrap text-[#00f3ff]/30">AGENT_ORCHESTRATION</div>
+              <div className="flex-1 flex overflow-hidden">
+                {/* 4. SIDEBAR: Functional Navigation Indicators */}
+                <div className="hidden md:flex w-16 flex-col items-center py-10 border-r border-white/10 bg-black/40">
+                  <Activity size={18} className="text-[#00f3ff]/40 mb-12" />
+                  <div className="flex-1 flex flex-col justify-around text-[9px] text-gray-600 font-black tracking-widest [writing-mode:vertical-lr] rotate-180">
+                    <span>SECTOR_07_ACTIVE</span>
+                    <span className="text-[#00f3ff]/30">ENCRYPTION_AES_256</span>
+                    <span>SIGNAL_STRENGTH_MAX</span>
+                  </div>
                 </div>
 
-                <div className="flex-1 p-8 overflow-y-auto scrollbar-thin scrollbar-thumb-[#00f3ff]/10 space-y-8 pr-[40px]">
+                {/* 5. OUTPUT: Redesigned Message Bubbles */}
+                <div className="flex-1 p-10 overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 space-y-12 pr-12 relative">
                   {displayHistory.map((msg, i) => (
-                    <div key={i} className={`text-[13px] md:text-sm leading-relaxed max-w-[85%] ${
-                      msg.role === 'user' ? 'text-white ml-auto' : 
-                      msg.role === 'system' ? 'text-gray-500 border-l border-white/10 pl-5 py-2' : 
-                      msg.role === 'error' ? 'text-red-500 bg-red-500/5 p-4' : 'text-[#00f3ff]'
-                    }`}>
-                      {msg.role === 'user' && <div className="text-[9px] text-gray-600 uppercase font-black mb-2 text-right tracking-[0.1em]">/ USER_UPLINK /</div>}
-                      {msg.role === 'kernel' && <div className="text-[9px] text-[#00f3ff]/50 uppercase font-black mb-3 tracking-[0.3em] flex items-center gap-2"><TerminalIcon size={10} /> [Incoming_Transmission]</div>}
-                      <span className="whitespace-pre-wrap block">{msg.text}</span>
-                    </div>
-                  ))}
-                  
-                  {/* MULTI-AGENT HANDSHAKE UI */}
-                  {isDelegating && (
-                    <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} className="p-4 bg-[#00f3ff]/5 border-l-2 border-[#00f3ff] flex items-center gap-4">
-                      <Binary size={14} className="text-[#00f3ff] animate-pulse" />
-                      <span className="text-[10px] text-[#00f3ff] font-black uppercase tracking-[0.2em]">{currentAgent}</span>
-                    </motion.div>
-                  )}
+                    <motion.div 
+                      initial={{ opacity: 0, x: -10 }} 
+                      animate={{ opacity: 1, x: 0 }} 
+                      key={i} 
+                      className={`relative group ${msg.role === 'user' ? 'ml-auto max-w-[70%]' : 'max-w-[85%]'}`}
+                    >
+                      {/* Meta Tags for messages */}
+                      <div className={`flex items-center gap-3 mb-3 text-[9px] font-black uppercase tracking-widest ${msg.role === 'user' ? 'justify-end text-gray-500' : 'text-[#00f3ff]/60'}`}>
+                        {msg.role === 'user' ? (
+                          <><span>User_Auth_Session</span><Command size={10} /></>
+                        ) : (
+                          <><TerminalIcon size={10} /><span>Kernel_Response_014</span></>
+                        )}
+                      </div>
 
-                  {isThinking && !isDelegating && (
-                    <div className="flex items-center gap-4 text-[#00f3ff] text-[10px] font-black tracking-widest py-4">
-                      <Activity size={16} className="animate-spin" />
-                      <span className="animate-pulse">FINALIZING_RESPONSE_KERNEL...</span>
-                    </div>
-                  )}
+                      <div className={`p-6 rounded-none border ${
+                        msg.role === 'user' 
+                          ? 'bg-white/5 border-white/10 text-white' 
+                          : 'bg-[#00f3ff]/5 border-[#00f3ff]/20 text-[#00f3ff]'
+                      } shadow-lg backdrop-blur-sm`}>
+                        <span className="whitespace-pre-wrap leading-relaxed text-sm font-medium tracking-tight">
+                          {msg.text}
+                        </span>
+                      </div>
+                    </motion.div>
+                  ))}
                   <div ref={messagesEndRef} />
                 </div>
               </div>
 
-              {/* Input */}
-              <div className="p-6 bg-[#080a12] border-t border-white/10 flex items-center gap-5">
-                <span className="text-[#00f3ff] text-xs font-black">SYS_ROOT:~$</span>
+              {/* 6. INPUT: High-Focus Input with Prompt */}
+              <div className="p-8 bg-black/60 border-t border-white/10 flex items-center gap-6">
+                <div className="flex items-center gap-3 text-[#00f3ff]">
+                  <span className="text-xs font-black px-2 py-1 bg-[#00f3ff]/10">ADMIN</span>
+                  <span className="text-sm font-black tracking-widest">~$</span>
+                </div>
                 <input
                   type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleCommand}
-                  disabled={isThinking || isDelegating}
-                  placeholder={isDelegating ? "AGENTS_WORKING..." : "Enter technical query..."}
-                  className="flex-1 bg-transparent border-none outline-none text-white placeholder-gray-700 text-sm font-bold" autoFocus
+                  className="flex-1 bg-transparent border-none outline-none text-white placeholder-gray-700 text-sm font-bold tracking-widest focus:ring-0"
+                  placeholder="EXECUTE COMMAND OR QUERY..."
                 />
               </div>
             </motion.div>
