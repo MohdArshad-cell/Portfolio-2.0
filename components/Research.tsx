@@ -106,7 +106,7 @@ export default function Research() {
                   <span className="text-[11px] text-emerald-400/60 font-mono">GEO_REF: 442_CORE_SYSTEM</span>
                 </div>
                 <a 
-                  href="https://raw.githubusercontent.com/MohdArshad-cell/Portfolio-2.0/a2f4520ab852250d17e0b8a3e11df4a2eab1eaff/public/asset/ARSHAD.pdf" 
+                  href="https://raw.githubusercontent.com/MohdArshad-cell/Portfolio-2.0/a2f4520ab852250d17e0b8a3e11df4a2eab1eaff/public/asset/Geosentinal.pdf" 
                   target="_blank"
                   className="group/btn relative px-8 py-4 bg-emerald-500 text-black font-black uppercase tracking-widest text-xs flex items-center gap-4 transition-all hover:bg-emerald-400 shadow-[0_0_30px_rgba(16,185,129,0.2)]"
                 >
