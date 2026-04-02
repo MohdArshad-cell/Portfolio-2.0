@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "globals.css";
+import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Terminal from "@/components/Terminal";
 import StatusBar from "@/components/StatusBar";
@@ -14,11 +14,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// 1. Keep this for SEO
 export const metadata: Metadata = {
   title: "Mohd Arshad | Systems Architect",
   description: "Official terminal of Mohd Arshad. Architecting high-concurrency engines and Multi-Agent AI systems.",
-  // Added Arshad_OS metadata for that "Empire" feel
-  viewport: "width=device-width, initial-scale=1",
+};
+
+// 2. MOVE viewport and themeColor HERE
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#05060a",
 };
 
