@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Terminal from "@/components/Terminal";
 import StatusBar from "@/components/StatusBar";
