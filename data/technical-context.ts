@@ -123,7 +123,7 @@ export const KNOWLEDGE_BASE = {
   EXPERIENCE: `
     APLYEASE: Lead Developer & Co-founder. Managing full-stack architecture and startup operations.
     RESEARCH: Lead Author of the GeoSentinel hybrid AI framework, validated against the 2019 India-Pakistan crisis.
-    TATA CONSULTANCY SERVICES (TCS): Received offer for the Ninja role (Feb 2026).
+    TATA CONSULTANCY SERVICES (TCS): Received offer for the System Engineer role (Feb 2026).
   `,
   SYSTEM: `
     KERNEL_VERSION: 1.2.0-STABLE
