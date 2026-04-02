@@ -45,7 +45,7 @@ export const KNOWLEDGE_BASE = {
       - Institute: "BBDNIIT, Lucknow"
     OFFER_DETAILS: 
       - Company: "Tata Consultancy Services (TCS)"
-      - Role: "Ninja Role (Offer confirmed March 02, 2026)"
+      - Role: "System Engineer (Offer confirmed March 02, 2026)"
     ACTIVE_PROJECTS:
       - TCS_XPLORE: "Engaged in pre-joining training and assessment preparation"
       - APYLEASE: "Leading software engineering intern responsibilities at the startup"
