@@ -74,7 +74,7 @@ export default function Hero() {
 
           <p className="text-gray-400 leading-relaxed text-base md:text-lg max-w-xl mb-12 font-medium">
             Backend Architect focused on building the high-frequency systems of the next decade. 
-            Currently transitioning to <span className="text-white font-bold">TCS Ninja</span> while scaling 
+            Currently transitioning to <span className="text-white font-bold">TCS</span> while scaling 
             <span className="text-[#00f3ff]"> HireEase</span> and researching 
             <span className="text-white"> GeoSentinel</span> AI frameworks.
           </p>
