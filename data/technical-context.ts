@@ -86,7 +86,7 @@ export const KNOWLEDGE_BASE = {
        - Core: Solves race conditions in flash sales using Redis + JPA.
        - Atomic Unlocking: Uses LUA script "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1])" to ensure users only release their own locks.
        - Reliability: @Retryable with exponential backoff handles DB collisions.
-       - METRICS: { "throughput": "5,000 TPS", "latency": "42ms", "concurrency_limit": "Unlimited", "stack": "Redis/Spring" }
+       - METRICS: { "throughput": "5,00 TPS", "latency": "42ms", "concurrency_limit": "Unlimited", "stack": "Redis/Spring" }
 
     2. STREAMFLOW (Distributed Notification Service):
        - Kafka Integration: High-throughput event processing with Consumer Groups.
