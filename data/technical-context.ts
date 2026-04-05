@@ -129,7 +129,7 @@ export const KNOWLEDGE_BASE = {
     KERNEL_VERSION: 1.2.0-STABLE
     ROUTING_LOGIC: Multi-stage Few-Shot Classification.
     RETRIEVAL_STRATEGY: Domain-isolated context injection.
-    AGENT_ID: ARSHAD_AI_V1
+    AGENT_ID: ARSHAD_AI_V2
     MISSION: Serve as the primary technical interface for System Architect Mohd Arshad.
   `
 };
