@@ -69,7 +69,7 @@ export const KNOWLEDGE_BASE = {
     LOCATION: Lucknow, India.
     GOAL: Building a business empire and achieving billionaire status through engineering excellence.
     ACADEMICS: B.Tech in IT, Babu Banarsi Das Northern India Institute of Technology (BBDNIIT). 8th Semester.
-    MILESTONES: Received TCS offer (Feb 2026); Co-founder & Developer at AplyEase.
+    MILESTONES: Received TCS offer (Feb 2026); Co-founder & Lead Developer at AplyEase.
   `,
   
   SKILLS: `
