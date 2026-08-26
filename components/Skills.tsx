@@ -6,44 +6,44 @@ const skills = [
   {
     category: "Distributed Backend Architecture",
     icon: <Server className="text-[#00f3ff]" size={32} />,
-    // Emphasizing the FlashTix/StreamFlow expertise
+    // Emphasizing SentinelLedger, FlashTix & StreamFlow
     items: [
-      "Java Spring Boot 3 & Security",
-      "Apache Kafka (Event-Driven)",
-      "Redis Distributed Locking (LUA)",
-      "System Design & Scalability",
-      "WebSockets (STOMP Protocol)",
-      "Microservices Orchestration"
+      "Java 21 & Spring Boot 3",
+      "Apache Kafka (Event-Driven & DLQ)",
+      "Redis Redlock & Lua Scripting",
+      "Saga Pattern & Outbox Transactions",
+      "Microservices & gRPC/REST APIs",
+      "Resilience4j (Circuit Breakers)"
     ],
     color: "border-[#00f3ff]/40",
     glow: "shadow-[0_0_20px_rgba(0,243,255,0.1)]"
   },
   {
-    category: "Neural Intelligence & RAG",
+    category: "AI Engineering & Computational Models",
     icon: <Brain className="text-[#7000ff]" size={32} />,
-    // Reflecting Career Catalyst and GeoSentinel research
+    // Reflecting ONNX runtime, Gemini LLM & GeoSentinel research
     items: [
-      "Multi-Agent Orchestration",
-      "Gemini 1.5 & OpenAI SDKs",
-      "RAG Architecture (Vector DBs)",
-      "Python (AI Engine Development)",
-      "DistilBERT & Sentiment PCA",
-      "Prompt Engineering Logic"
+      "ONNX Runtime (Embedded In-Memory ML)",
+      "Spring AI & Google Gemini API",
+      "Python (NLP, DistilBERT, PCA)",
+      "Statistical Causal Modeling (Granger)",
+      "Vector Search & pgvector",
+      "Asynchronous Worker Pipelines"
     ],
     color: "border-[#7000ff]/40",
     glow: "shadow-[0_0_20px_rgba(112,0,255,0.1)]"
   },
   {
-    category: "Infrastructure & Data Integrity",
+    category: "Data Integrity & Cloud Infrastructure",
     icon: <Database className="text-emerald-400" size={32} />,
-    // Emphasizing the TCS-ready OCI and DevOps skills
+    // Emphasizing double-entry ledger, observability & container orchestration
     items: [
-      "PostgreSQL (Optimistic Locking)",
-      "MongoDB (Data Sharding)",
-      "Oracle Cloud (OCI Certified)",
-      "Docker & K8s Deployment",
-      "CI/CD (GitHub Actions)",
-      "Redis Caching Strategies"
+      "PostgreSQL (Double-Entry Ledger & ACID)",
+      "MongoDB & Redis Caching Patterns",
+      "Docker & Kubernetes (HPA Scaling)",
+      "HikariCP & Database Index Tuning",
+      "Prometheus, Grafana & Zipkin",
+      "CI/CD (GitHub Actions) & Testcontainers"
     ],
     color: "border-emerald-400/40",
     glow: "shadow-[0_0_20px_rgba(52,211,153,0.1)]"
