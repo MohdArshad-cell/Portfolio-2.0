@@ -74,7 +74,7 @@ export default function Projects() {
 
         <GitHubStats />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {projects.map((p, i) => (
             <ProjectCard key={i} project={p} index={i} />
           ))}
