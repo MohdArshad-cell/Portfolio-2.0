@@ -167,7 +167,7 @@ export default function BootScreen({ onComplete }: { onComplete: () => void }) {
           </div>
           <div className="h-1 w-full bg-white/10 relative overflow-hidden">
             <div 
-              style={{ width: \`\${progress}%\` }} 
+              style={{ width: `${progress}%` }} 
               className="h-full bg-[#00f3ff] shadow-[0_0_15px_#00f3ff] transition-all duration-75"
             />
           </div>
