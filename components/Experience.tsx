@@ -4,19 +4,19 @@ import { Calendar, ArrowRight, ExternalLink, Target, Zap } from "lucide-react";
 
 const experiences = [
   {
-    company: "HireEase", // Rebranded from AplyEase
-    website: "https://hireease.me", 
+    company: "HireEase", // Formerly AplyEase
+    website: "https://hireease.me",
     role: "Software Engineering Intern",
     date: "March 2025 — Present",
     status: "ACTIVE_MISSION",
-    desc: "Revolutionizing global recruitment through autonomous Multi-Agent orchestration and high-density AI profiling.", 
+    desc: "Architecting autonomous multi-agent AI pipelines and scalable backend orchestration engines for automated recruitment workflows.",
     points: [
-      "Architected a <strong class='text-white'>Multi-Agent AI System</strong> (Tailor, Evaluate, Optimize) leveraging Google Gemini 1.5 Pro, achieving consistent <strong class='text-[#00f3ff]'>90+ ATS compatibility scores</strong>.",
-      "Served as <strong class='text-white'>Interim Technical Lead</strong>, managing cross-functional workflows and optimizing internal AI-agent delivery pipelines for high-velocity output.",
-      "Engineered automated resume generation engines that facilitate sub-second document tailoring for global enterprise clients (US/UK markets).",
-      "Optimized prompt-chaining logic to reduce token latency by 35%, ensuring real-time responsiveness in the recruitment portal."
+      "Architected a <strong class='text-white'>Multi-Agent AI Pipeline</strong> (Tailor, Evaluate, Optimize) leveraging Google Gemini API, consistently achieving <strong class='text-[#00f3ff]'>90%+ ATS compatibility scores</strong>.",
+      "Served as <strong class='text-white'>Interim Technical Lead</strong>, managing task distribution and standardizing prompt schemas across cross-functional engineering workflows.",
+      "Built automated document parsing and generation pipelines, slashing client delivery turnaround time by <strong class='text-[#00f3ff]'>40%</strong>.",
+      "Optimized prompt-chaining workflows and asynchronous response handling to cut LLM token latency by <strong class='text-[#00f3ff]'>35%</strong>."
     ],
-    tech: ["Gemini 1.5 Pro", "LLM Orchestration", "Node.js", "System Design", "Prompt Engineering"]
+    tech: ["Google Gemini API", "Spring Boot", "Python", "Multi-Agent Systems", "Redis", "Prompt Engineering"]
   }
 ];
 
