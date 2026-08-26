@@ -5,33 +5,33 @@ import { Award, Briefcase, GraduationCap, CheckCircle } from "lucide-react";
 const milestones = [
   {
     year: "Oct 2026",
-    title: "TCS Software Engineer",
-    subtitle: "Tata Consultancy Services (TCS Xplore)",
-    desc: "Transitioning to enterprise-scale systems architecture. Focused on high-availability backend solutions and cloud integrations.",
+    title: "Incoming Systems Engineer",
+    subtitle: "Tata Consultancy Services (TCS Digital/Prime)",
+    desc: "Transitioning to enterprise-scale distributed systems and high-availability backend microservices architecture.",
     icon: <Briefcase size={16} className="text-[#00f3ff]" />,
     color: "border-[#00f3ff]"
   },
   {
     year: "2026",
-    title: "OCI Certified",
-    subtitle: "Oracle Cloud Infrastructure",
-    desc: "Achieved certification in cloud architecture, validating expertise in deploying scalable, secure, and fault-tolerant cloud solutions.",
+    title: "SentinelLedger & Research",
+    subtitle: "Financial Engines & Computational Simulation",
+    desc: "Engineered 10,000+ RPS append-only ledger systems and published research on causal conflict simulation (GeoSentinel).",
     icon: <Award size={16} className="text-[#7000ff]" />,
     color: "border-[#7000ff]"
   },
   {
-    year: "2025 - 2026",
+    year: "2025 — 2026",
     title: "HireEase & FlashTix",
-    subtitle: "High-Concurrency Architectures",
-    desc: "Engineered platforms processing 5,000+ TPS using Redis LUA locks, and built AI multi-agent pipelines achieving 98% ATS accuracy.",
+    subtitle: "High-Concurrency Architectures & Multi-Agent AI",
+    desc: "Engineered distributed ticketing engines handling 5,000+ RPS with Redis Redlock and deployed multi-agent LLM pipelines.",
     icon: <CheckCircle size={16} className="text-emerald-400" />,
     color: "border-emerald-500"
   },
   {
-    year: "2024",
-    title: "B.Tech Computer Science",
-    subtitle: "SRMSCET, Bareilly",
-    desc: "Graduated with 80% marks. Core focus on Data Structures, Algorithms, and Distributed Systems.",
+    year: "2022 — 2026",
+    title: "B.Tech Information Technology",
+    subtitle: "BBDNIIT, Lucknow",
+    desc: "Graduated with 7.6/10.0 CGPA. Core focus on Distributed Systems, Operating Systems, Database Internals, and Computer Networks.",
     icon: <GraduationCap size={16} className="text-pink-400" />,
     color: "border-pink-500"
   }
