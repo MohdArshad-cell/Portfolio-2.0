@@ -148,7 +148,7 @@ export default function Terminal() {
       }
 
       if (lowerCmd === "resume") {
-        window.open("https://raw.githubusercontent.com/MohdArshad-cell/Portfolio-2.0/a2f4520ab852250d17e0b8a3e11df4a2eab1eaff/public/asset/ARSHAD.pdf", '_blank');
+        window.open("/asset/ARSHAD.pdf", '_blank');
         setDisplayHistory(prev => [...prev, { role: "system", text: "DOWNLOADING PROTOCOL_CV.PDF..." }]);
         return;
       }
@@ -194,7 +194,7 @@ export default function Terminal() {
 
         // ACTION_TRIGGERS
         if (rawResponse.includes("[ACTION: OPEN_CV]")) {
-          window.open("https://raw.githubusercontent.com/MohdArshad-cell/Portfolio-2.0/a2f4520ab852250d17e0b8a3e11df4a2eab1eaff/public/asset/ARSHAD.pdf", '_blank');
+          window.open("/asset/ARSHAD.pdf", '_blank');
         }
 
         const metrics = extractMetrics(rawResponse);

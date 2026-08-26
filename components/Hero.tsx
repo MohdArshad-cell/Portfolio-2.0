@@ -90,7 +90,7 @@ export default function Hero() {
             </a>
 
             <a 
-              href="https://raw.githubusercontent.com/MohdArshad-cell/Portfolio-2.0/a2f4520ab852250d17e0b8a3e11df4a2eab1eaff/public/asset/ARSHAD.pdf" 
+              href="/asset/ARSHAD.pdf" 
               target="_blank"
               className="flex items-center justify-center gap-3 px-8 py-4 border border-white/10 text-white hover:border-[#7000ff] hover:text-[#7000ff] transition-all rounded-none bg-white/5"
             >
