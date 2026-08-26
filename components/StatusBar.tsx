@@ -33,26 +33,22 @@ export default function StatusBar() {
     updateTime();
     const interval = setInterval(updateTime, 1000);
 
-    // StatusBar.tsx mein fetchIntel ko aise badlo:
-
-const fetchIntel = async () => {
-  try {
-    // External URL ki jagah apne local API route ko call karo
-    const res = await fetch('/api/location'); 
-    const data = await res.json();
-    
-    // ipwho.is (jo tum route.ts mein use kar rahe ho) ka response structure check karo
-    if (data.success !== false) {
-      setLocation(`${data.city}, ${data.country_code}`);
-      setIp(data.ip);
-    } else {
-      setLocation("ANONYMOUS_NODE");
-    }
-  } catch (err) {
-    setLocation("OFFLINE_MODE");
-    console.error("SYS_INTEL_FAILURE:", err);
-  }
-};
+    const fetchIntel = async () => {
+      try {
+        const res = await fetch('/api/location'); 
+        const data = await res.json();
+        
+        if (data.success !== false) {
+          setLocation(`${data.city}, ${data.country_code}`);
+          setIp(data.ip);
+        } else {
+          setLocation("ANONYMOUS_NODE");
+        }
+      } catch (err) {
+        setLocation("OFFLINE_MODE");
+        console.error("SYS_INTEL_FAILURE:", err);
+      }
+    };
 
     fetchIntel();
     
@@ -120,7 +116,7 @@ const fetchIntel = async () => {
         </div>
         
         <button 
-          className="flex items-center gap-2 border-l border-white/10 dark:border-white/10 border-gray-300 pl-6 cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f3ff]" 
+          className="flex items-center gap-2 border-l border-white/10 pl-6 cursor-pointer hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f3ff]" 
           onClick={toggleMute}
           aria-label={muted ? "Unmute system audio" : "Mute system audio"}
         >
@@ -130,7 +126,7 @@ const fetchIntel = async () => {
 
         {mounted && (
           <button 
-            className="flex items-center gap-2 border-l border-white/10 dark:border-white/10 border-gray-300 pl-6 cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f3ff]" 
+            className="flex items-center gap-2 border-l border-white/10 pl-6 cursor-pointer hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f3ff]" 
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             aria-label={`Toggle theme. Current theme is ${theme}`}
           >
