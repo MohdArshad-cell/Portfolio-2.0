@@ -1,5 +1,5 @@
-import { Cpu, Activity, Bot, Shield } from "lucide-react"; 
-import ProjectCard from "./ProjectCard"; 
+import { Cpu, Activity, Bot, Shield } from "lucide-react";
+import ProjectCard from "./ProjectCard";
 import GitHubStats from "./GitHubStats";
 
 const projects = [
@@ -12,7 +12,7 @@ const projects = [
     statIcon: <Activity size={16} className="text-emerald-400" />,
     link: "/project/sentinelledger",
     github: "https://github.com/MohdArshad-cell/SentinelLedger",
-    image: "/asset/sentinelledger_arch.png",
+    image: "/asset/sentinelledger_arch.svg",
     color: "hover:border-emerald-500/50"
   },
   {
