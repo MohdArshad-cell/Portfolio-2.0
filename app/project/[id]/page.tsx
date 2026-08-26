@@ -1,98 +1,123 @@
 import ProjectClient from "@/components/ProjectClient";
 
-// ✅ UPDATED PROJECT DATA
+// ✅ UPDATED PRODUCTION PROJECT DATA
 const projects = {
-  // 1. CAREER CATALYST (New "Brahmastra" Project)
-  careercatalyst: {
-    title: "Career Catalyst",
-    subtitle: "Multi-Agent AI Resume Architect",
-    desc: "Autonomous multi-agent system (Tailor, Evaluator, Optimizer) that iteratively refines resumes to achieve 90+ ATS scores.",
-    content: "This system goes beyond simple text generation by implementing a 'Human-in-the-Loop' architecture using AI Agents. It features a Hybrid Microservices design: A Java Spring Boot Orchestrator manages user sessions, while a Python FastAPI Microservice handles the AI 'Chain-of-Thought' processing and high-fidelity LaTeX-to-PDF compilation. The AI loop consists of three agents: a 'Tailor' that rewrites content based on JD, an 'Evaluator' (ATS Simulator) that scores the draft, and an 'Optimizer' that fixes identified gaps iteratively.",
-    tech: ["Java Spring Boot", "Python (FastAPI)", "Google Gemini 1.5", "LaTeX Engine", "Docker", "React"],
+  // 1. SENTINELLEDGER (Fintech & Distributed Transactions Anchor)
+  sentinelledger: {
+    title: "SentinelLedger",
+    subtitle: "Distributed Financial Ledger & Payment Engine",
+    desc: "Event-driven financial platform handling 10,000+ RPS with append-only double-entry bookkeeping, Saga failure recovery, and <15ms ONNX fraud evaluation.",
+    content: "Engineered to solve data integrity and race conditions in mission-critical financial systems. Implements an append-only double-entry ledger in PostgreSQL where raw balance updates are strictly prohibited, ensuring a tamper-proof audit trail. Distributed transactions across microservices are coordinated via the Saga Orchestration Pattern backed by a Transactional Outbox to guarantee at-least-once message delivery and automatic compensating reversals on downstream failure. Account-level race conditions and double-spending are eliminated via Redis Redlock and idempotency keys, while fraud detection is evaluated in under 15ms by embedding an XGBoost model directly in the JVM via ONNX Runtime.",
+    tech: ["Java 21", "Spring Boot 3", "Apache Kafka", "PostgreSQL", "Redis (Redlock)", "ONNX Runtime", "Kubernetes", "Docker"],
     stats: { 
-      performance: "4-Agent Loop", 
-      latency: "Hybrid Arch", 
-      scale: "90+ ATS Score" 
+      performance: "10k+ RPS", 
+      latency: "<15ms Fraud Check", 
+      scale: "Double-Entry ACID" 
     },
-    github: "https://github.com/mohdarshad-cell/ai-powered-career-catalyst",
-    image: "/asset/careercatalyst-architecture.png",
+    github: "https://github.com/MohdArshad-cell/SentinelLedger",
+    image: "/asset/sentinelledger_arch.png",
     mermaidCode: `
       graph TD
-        User([User Request]) --> Gateway[API Gateway / Auth]
-        Gateway --> Python[Python FastAPI AI Microservice]
-        Python --> Agent1{Tailor Agent}
-        Python --> Agent2{Evaluator Agent}
-        Python --> Agent3{Optimizer Agent}
-        Agent1 --> Agent2
-        Agent2 --> Agent3
-        Agent3 -.->|Feedback Loop| Agent1
-        Python --> Latex[LaTeX Compiler]
-        Latex --> PDF[Optimized Resume PDF]
-        Gateway --> Java[Java Spring Boot Orchestrator]
-        Java --> DB[(PostgreSQL)]
-        style Python stroke:#7000ff,stroke-width:2px
-        style Agent1 fill:#0b0d17,stroke:#00f3ff
-        style Agent2 fill:#0b0d17,stroke:#00f3ff
-        style Agent3 fill:#0b0d17,stroke:#00f3ff
+        Client([Client / API Gateway]) --> Orch[Payment Orchestrator]
+        Orch --> RedisLock[(Redis Redlock / Idempotency)]
+        Orch --> Fraud[Fraud Detection Service - ONNX JVM]
+        Fraud -->|Score Valid| Kafka[Apache Kafka Backbone]
+        Fraud -->|High Risk| Compensate[Saga Compensating Rollback]
+        Kafka --> Ledger[Ledger Engine - Append-Only Postgres]
+        Kafka --> Wallet[Wallet Service - Read Projection]
+        Ledger --> Outbox[Transactional Outbox Table]
+        style Kafka stroke:#00f3ff,stroke-width:2px
+        style RedisLock stroke:#e3342f,stroke-width:2px
+        style Ledger stroke:#336791,stroke-width:2px
+        style Fraud fill:#0b0d17,stroke:#7000ff
     `
   },
 
-  // 2. FLASHTIX (Concurrency Project)
+  // 2. FLASHTIX (High-Concurrency Engine)
   flashtix: {
     title: "FlashTix",
     subtitle: "High-Concurrency Ticketing Engine",
-    desc: "Backend system engineered to handle 5,000+ requests per second with zero double-bookings.",
-    content: "The core challenge was race conditions during flash sales. I implemented Optimistic Locking using JPA @Version annotation to prevent data inconsistency at the database level. To further offload the DB, I architected a Write-Through Redis caching strategy with Distributed Locks (Redlock concept), where inventory checks happen in-memory, reducing DB hits by ~60% and ensuring zero overselling.",
-    tech: ["Java Spring Boot", "Redis (Distributed Locks)", "PostgreSQL", "JMeter", "Docker"],
+    desc: "Distributed event booking engine handling 5,000+ RPS with zero overselling anomalies.",
+    content: "Engineered to eliminate severe race conditions and overselling during flash-sale traffic surges. The fast execution path uses atomic Redis Lua scripts and Redlock distributed locks to handle seat reservation checks and decrements entirely in-memory. As a multi-layered boundary, the persistence layer utilizes PostgreSQL Optimistic Locking (@Version) to prevent dirty writes under database contention. System throughput was optimized via HikariCP connection pool tuning, with live lock contention, error rate, and p99 latency telemetries monitored via Prometheus and Grafana.",
+    tech: ["Java 21", "Spring Boot 3", "Redis (Lua/Redlock)", "PostgreSQL", "HikariCP", "Prometheus", "Grafana", "Docker"],
     stats: { 
-      performance: "5k req/s", 
-      latency: "99.99% Consistency", 
-      scale: "Zero Oversell" 
+      performance: "5,000+ RPS", 
+      latency: "Sub-50ms p99", 
+      scale: "Zero Overselling" 
     },
-    github: "https://github.com/MohdArshad-cell/FlashTix-Backend",
-    image: "/asset/flashtix-architecture.png",
+    github: "https://github.com/MohdArshad-cell/FlashTix",
+    image: "/asset/flashtix_arch.png",
     mermaidCode: `
       graph LR
-        Client([Mobile/Web Client]) --> LB[Load Balancer]
+        Client([Client Requests]) --> LB[Load Balancer]
         LB --> API[Spring Boot API]
-        API --> Redis[(Redis Cluster)]
-        Redis -- Redlock --> Lock[Distributed Lock]
-        Lock -- Check/Deduct --> Redis
-        API -- Write-Behind --> DB[(PostgreSQL)]
-        DB -- JPA @Version --> Conflict[Optimistic Locking]
+        API --> Redis[(Redis In-Memory Engine)]
+        Redis -- Lua Script + Redlock --> Lock[Atomic Fast-Path Decrement]
+        Lock -- Success --> DB[(PostgreSQL)]
+        DB -- JPA @Version --> Conflict[Optimistic Locking Barrier]
+        API --> Metrics[Prometheus / Grafana Telemetry]
         style Redis stroke:#e3342f,stroke-width:2px
         style DB stroke:#336791,stroke-width:2px
         style API fill:#0b0d17,stroke:#00f3ff
     `
   },
 
-  // 3. STREAMFLOW (Distributed Systems Project)
+  // 3. STREAMFLOW (Distributed Event Streaming)
   streamflow: {
     title: "StreamFlow",
-    subtitle: "Distributed Notification Service",
-    desc: "Event-driven microservice capable of processing 1M+ notifications/hour with zero data loss.",
-    content: "Designed to decouple notification generation from delivery using the Pub/Sub model. Producers push events to Apache Kafka topics (partitioned for scale). Consumer services pick these up and dispatch emails/SMS asynchronously. To ensure reliability, I implemented a Dead Letter Queue (DLQ) mechanism for failed messages and used MongoDB for flexible payload storage.",
-    tech: ["Apache Kafka", "WebSockets (STOMP)", "MongoDB", "Java Spring Boot", "Zipkin"],
+    subtitle: "High-Throughput Distributed Notification Engine",
+    desc: "Fault-tolerant messaging backbone processing 10,000+ events/sec with zero message loss and DLQ isolation.",
+    content: "Designed as an asynchronous notification orchestrator decoupling event ingestion from multi-channel delivery (Email, SMS, Push). Uses Apache Kafka with custom partition key hashing and manual offset commits to guarantee strict message ordering and at-least-once delivery semantics. Downstream provider downtime is handled via an automated retry pipeline integrating Dead Letter Queues (DLQ) with exponential backoff and jitter algorithms. High-frequency notification queries are served using a Redis Write-Through caching layer, offloading over 70% of read IOPS from MongoDB.",
+    tech: ["Java", "Spring Boot", "Apache Kafka", "Redis (Write-Through)", "MongoDB", "Zipkin", "Docker"],
     stats: { 
-      performance: "1M+ Events/Hr", 
-      latency: "<50ms Delivery", 
-      scale: "DLQ Reliability" 
+      performance: "10,000+ Events/Sec", 
+      latency: "Sub-5ms Cache Read", 
+      scale: "DLQ Fault-Tolerance" 
     },
-    github: "https://github.com/MohdArshad-cell/stream-flow-",
-    image: "/asset/streamflow-architecture.png",
+    github: "https://github.com/MohdArshad-cell/StreamFlow",
+    image: "/asset/streamflow_arch.png",
     mermaidCode: `
       graph TD
-        Prod[Producers] --> API[Spring Boot Ingestion]
-        API --> Kafka[Apache Kafka Topics]
-        Kafka --> Cons1[Email Consumer]
-        Kafka --> Cons2[SMS Consumer]
-        Kafka --> Cons3[Push Consumer]
-        Cons1 -- Success --> Mongo[(MongoDB Audit)]
-        Cons1 -- Fail --> DLQ[Dead Letter Queue]
-        DLQ --> Retry[Retry Processor]
+        Prod[Upstream Services] --> API[Spring Boot Ingestion]
+        API --> Kafka[Apache Kafka Partitioned Topics]
+        Kafka --> Worker[Consumer Worker Clusters]
+        Worker --> Cache[(Redis Write-Through Cache)]
+        Worker --> Mongo[(MongoDB Audit Storage)]
+        Worker -- Transient Failure --> DLQ[Dead Letter Queue]
+        DLQ --> Retry[Exponential Backoff Processor]
         Retry -.-> Kafka
         style Kafka stroke:#00f3ff,stroke-width:2px
         style DLQ stroke:#ff0000,stroke-width:2px
+        style Cache stroke:#e3342f,stroke-width:2px
+    `
+  },
+
+  // 4. CAREER CATALYST (AI Document Compilation Engine)
+  careercatalyst: {
+    title: "Career Catalyst",
+    subtitle: "AI-Driven Multi-Agent Document Compilation Engine",
+    desc: "Autonomous multi-agent pipeline executing asynchronous semantic resume parsing and dynamic LaTeX PDF compilation.",
+    content: "Architected an end-to-end document generation engine pairing a Java Spring Boot backend with Python AI worker processes. Leverages Google Gemini models across an iterative agent pipeline (Tailor, Evaluator, Optimizer) to achieve 90%+ ATS compatibility scores. Structured JSON outputs are compiled directly into production LaTeX templates, avoiding parsing artifacts common in HTML-to-PDF tools. Asynchronous background workers and Redis task caching ensure non-blocking client execution flows during heavy LLM generation runs.",
+    tech: ["Java Spring Boot", "Python (FastAPI)", "Google Gemini API", "LaTeX Engine", "Redis", "Docker"],
+    stats: { 
+      performance: "3-Agent Loop", 
+      latency: "Non-Blocking Async", 
+      scale: "90%+ ATS Score" 
+    },
+    github: "https://github.com/MohdArshad-cell/Career-Catalyst",
+    image: "/asset/careercatalyst_arch.png",
+    mermaidCode: `
+      graph TD
+        User([Client Request]) --> Gateway[API Gateway / Auth]
+        Gateway --> Java[Spring Boot Backend]
+        Java --> Redis[(Redis Task State Cache)]
+        Java --> Python[Python AI Service]
+        Python --> Gemini[Google Gemini API Multi-Agent Loop]
+        Gemini --> Latex[LaTeX Compiler Engine]
+        Latex --> PDF[Optimized Resume Artifact]
+        style Python stroke:#7000ff,stroke-width:2px
+        style Java fill:#0b0d17,stroke:#00f3ff
+        style Redis stroke:#e3342f,stroke-width:2px
     `
   }
 };

@@ -31,7 +31,7 @@ const milestones = [
     year: "2022 — 2026",
     title: "B.Tech Information Technology",
     subtitle: "BBDNIIT, Lucknow",
-    desc: "Graduated with 7.6/10.0 CGPA. Core focus on Distributed Systems, Operating Systems, Database Internals, and Computer Networks.",
+    desc: "Graduated with 7.87/10.0 CGPA. Core focus on Distributed Systems, Operating Systems, Database Internals, and Computer Networks.",
     icon: <GraduationCap size={16} className="text-pink-400" />,
     color: "border-pink-500"
   }
@@ -50,7 +50,7 @@ export default function Timeline() {
 
         <div className="relative border-l border-white/10 ml-4 md:ml-0 md:pl-0">
           {milestones.map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -69,11 +69,11 @@ export default function Timeline() {
                     </div>
                   ) : null}
                 </div>
-                
+
                 <div className="z-20 flex items-center order-1 bg-[#05060a] shadow-xl w-10 h-10 rounded-full border border-white/10 absolute left-[-20px] md:left-1/2 md:-translate-x-1/2 justify-center shadow-[0_0_15px_rgba(0,0,0,0.5)]">
                   {item.icon}
                 </div>
-                
+
                 <div className="order-1 md:w-5/12 md:pl-8">
                   {i % 2 !== 0 ? (
                     <div className="text-left">
