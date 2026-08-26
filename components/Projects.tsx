@@ -12,7 +12,7 @@ const projects = [
     statIcon: <Activity size={16} className="text-emerald-400" />,
     link: "/project/sentinelledger",
     github: "https://github.com/MohdArshad-cell/SentinelLedger",
-    image: "/asset/sentinelledger_arch.svg",
+    image: "/asset/sentinelledger_arch.png",
     color: "hover:border-emerald-500/50"
   },
   {
