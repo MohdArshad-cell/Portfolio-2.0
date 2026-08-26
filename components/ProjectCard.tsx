@@ -28,7 +28,7 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className={`glass-card p-6 md:p-8 rounded-2xl relative group border border-white/5 transition-all duration-300 ${project.color}`}
+      className={`glass-card p-6 md:p-8 rounded-2xl relative group border border-white/5 transition-all duration-300 flex flex-col h-full ${project.color}`}
     >
       <div className="absolute top-4 right-4 md:top-6 md:right-6 opacity-20 group-hover:opacity-100 transition-opacity flex gap-3 z-10">
         {project.github && (
@@ -61,7 +61,7 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
         {project.desc}
       </p>
 
-      <div className="space-y-4 md:space-y-6">
+      <div className="space-y-4 md:space-y-6 mt-auto">
         <div className="flex flex-wrap gap-2">
           {project.tech.map(t => (
             <span key={t} className="text-[10px] md:text-xs font-mono px-2 py-1 rounded bg-white dark:bg-[#0b0d17] border border-black/10 dark:border-white/10 text-gray-600 dark:text-gray-400">
