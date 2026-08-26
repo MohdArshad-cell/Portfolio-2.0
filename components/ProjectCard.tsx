@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink, Activity } from "lucide-react"; 
 import Link from "next/link"; 
+import Image from "next/image";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import { ReactNode } from "react";
 
 // Define the types so TypeScript doesn't yell at you
@@ -15,6 +18,7 @@ interface ProjectProps {
   link: string;
   github?: string;
   liveDocs?: string;
+  image?: string;
   color: string;
 }
 
@@ -38,6 +42,20 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
       <h3 className="text-xl md:text-2xl font-bold mb-1">{project.title}</h3>
       <p className="text-xs md:text-sm font-mono text-gray-500 mb-4 md:mb-6">{project.subtitle}</p>
       
+      {project.image && (
+        <div className="mb-6 rounded-lg overflow-hidden border border-white/10 bg-black/50">
+          <Zoom classDialog="custom-zoom">
+            <Image 
+              src={project.image} 
+              alt={`${project.title} Architecture Diagram`}
+              width={800}
+              height={450}
+              className="w-full h-auto object-cover opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </Zoom>
+        </div>
+      )}
+
       <p className="text-gray-400 leading-relaxed text-sm mb-6 md:mb-8 line-clamp-3">
         {project.desc}
       </p>
@@ -45,7 +63,7 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
       <div className="space-y-4 md:space-y-6">
         <div className="flex flex-wrap gap-2">
           {project.tech.map(t => (
-            <span key={t} className="text-[10px] md:text-xs font-mono px-2 py-1 rounded bg-[#0b0d17] border border-white/10 text-gray-400">
+            <span key={t} className="text-[10px] md:text-xs font-mono px-2 py-1 rounded bg-white dark:bg-[#0b0d17] border border-black/10 dark:border-white/10 text-gray-600 dark:text-gray-400">
               {t}
             </span>
           ))}

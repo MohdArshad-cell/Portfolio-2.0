@@ -1,5 +1,6 @@
-import { Cpu, Activity, Bot, Zap, Shield, Database } from "lucide-react"; 
+import { Cpu, Activity, Bot, Shield } from "lucide-react"; 
 import ProjectCard from "./ProjectCard"; 
+import GitHubStats from "./GitHubStats";
 
 const projects = [
   {
@@ -11,6 +12,7 @@ const projects = [
     statIcon: <Bot size={16} className="text-pink-400"/>, 
     link: "/project/careercatalyst", 
     github: "https://github.com/MohdArshad-cell/Career-Catalyst",
+    image: "/asset/careercatalyst_arch.png",
     color: "hover:border-pink-500/50"
   },
   {
@@ -22,6 +24,7 @@ const projects = [
     statIcon: <Activity size={16} className="text-[#00f3ff]"/>,
     link: "/project/flashtix", 
     github: "https://github.com/MohdArshad-cell/FlashTix", 
+    image: "/asset/flashtix_arch.png",
     color: "hover:border-[#00f3ff]/50"
   },
   {
@@ -33,6 +36,7 @@ const projects = [
     statIcon: <Cpu size={16} className="text-[#7000ff]"/>,
     link: "/project/streamflow", 
     github: "https://github.com/MohdArshad-cell/StreamFlow",
+    image: "/asset/streamflow_arch.png",
     color: "hover:border-[#7000ff]/50"
   }
 ];
@@ -56,25 +60,7 @@ export default function Projects() {
           <div className="h-px bg-gradient-to-r from-[#00f3ff]/50 to-transparent flex-grow hidden md:block mt-8"></div>
         </div>
 
-        {/* System Dashboard Metadata */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 border-b border-white/5 pb-12">
-           <div className="flex flex-col gap-1 border-l border-white/10 pl-4">
-              <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Global_Status</span>
-              <span className="text-xs text-emerald-400 font-mono">ALL_SYSTEMS_NOMINAL</span>
-           </div>
-           <div className="flex flex-col gap-1 border-l border-white/10 pl-4">
-              <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Total_Ingestion</span>
-              <span className="text-xs text-white font-mono">15.4M+_EVENTS_LOGGED</span>
-           </div>
-           <div className="flex flex-col gap-1 border-l border-white/10 pl-4">
-              <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Kernel_Version</span>
-              <span className="text-xs text-[#00f3ff] font-mono">ARSHAD_OS_V1.2.0</span>
-           </div>
-           <div className="flex flex-col gap-1 border-l border-white/10 pl-4">
-              <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Node_Cluster</span>
-              <span className="text-xs text-gray-300 font-mono">LKO_MAIN_MAINFRAME</span>
-           </div>
-        </div>
+        <GitHubStats />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p, i) => (

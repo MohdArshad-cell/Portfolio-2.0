@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FileText, Download, Target, Activity, Zap, ShieldAlert, Cpu } from "lucide-react";
+import { Download, Target, Zap, ShieldAlert, Cpu } from "lucide-react";
 
 export default function Research() {
   return (
@@ -25,7 +25,7 @@ export default function Research() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative bg-[#0b0d17]/40 border border-emerald-500/20 p-8 md:p-12 overflow-hidden group"
+          className="relative bg-white/40 dark:bg-[#0b0d17]/40 border border-emerald-500/20 p-8 md:p-12 overflow-hidden group"
         >
           {/* Industrial CRT Scanline Overlay */}
           <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%)] bg-[length:100%_4px]" />

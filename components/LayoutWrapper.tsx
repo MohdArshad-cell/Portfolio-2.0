@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import BootScreen from "./BootScreen";
 
@@ -11,11 +11,6 @@ export default function LayoutWrapper({
   const [isBooted, setIsBooted] = useState(false);
 
   const handleBootComplete = () => {
-    // 1. Initialize and play the "Login Successful" audio
-    const audio = new Audio("/asset/chirp.mp3");
-    audio.volume = 0.4; // Keep it subtle, not loud
-    audio.play().catch(e => console.log("Audio play blocked by browser policy."));
-
     // 2. Flip the state
     setIsBooted(true);
   };

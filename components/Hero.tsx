@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { Github, FileText, Server, Code2, Brain, Zap, ShieldCheck, Activity } from "lucide-react"; 
+import { Github, FileText, Server, Brain, ShieldCheck, Activity } from "lucide-react"; 
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -107,7 +107,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 1 }}
           className="relative hidden lg:flex justify-center"
         >
-          <div className="relative z-10 bg-[#0b0d17]/80 backdrop-blur-xl p-10 border border-white/10 rounded-none w-full max-w-md shadow-2xl overflow-hidden">
+          <div className="relative z-10 bg-white/80 dark:bg-[#0b0d17]/80 backdrop-blur-xl p-10 border border-black/10 dark:border-white/10 rounded-none w-full max-w-md shadow-2xl overflow-hidden">
             {/* Scanline Effect */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%)] bg-[length:100%_4px]" />
             
@@ -128,7 +128,7 @@ export default function Hero() {
                     <Server className="text-gray-500 group-hover:text-[#00f3ff]" size={20}/>
                     <span className="text-[10px] font-mono text-[#00f3ff]/60">98% Load_Capacity</span>
                   </div>
-                  <div className="text-xs font-mono text-white mb-2 tracking-tight">Backend_Engine: Java/Kafka/Redis</div>
+                  <div className="text-xs font-mono text-black dark:text-white mb-2 tracking-tight">Backend_Engine: Java/Kafka/Redis</div>
                   <div className="h-[2px] w-full bg-white/5">
                     <motion.div initial={{ width: 0 }} animate={{ width: "95%" }} transition={{ duration: 1.5 }} className="h-full bg-[#00f3ff]" />
                   </div>

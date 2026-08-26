@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Server, Brain, Database, Shield, Cpu, Activity } from "lucide-react";
+import { Server, Brain, Database } from "lucide-react";
 
 const skills = [
   {
@@ -79,7 +79,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className={`relative bg-[#0b0d17]/50 backdrop-blur-xl p-8 border border-white/10 rounded-none border-t-4 ${skill.color} ${skill.glow} hover:bg-[#0f1220] transition-all duration-500 group overflow-hidden`}
+              className={`relative bg-white/50 dark:bg-[#0b0d17]/50 backdrop-blur-xl p-8 border border-black/10 dark:border-white/10 rounded-none border-t-4 ${skill.color} ${skill.glow} hover:bg-gray-100 dark:hover:bg-[#0f1220] transition-all duration-500 group overflow-hidden`}
             >
               {/* Animated Corner accent */}
               <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-white/5 to-transparent rotate-45 translate-x-8 -translate-y-8" />

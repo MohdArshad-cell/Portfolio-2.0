@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function BootScreen({ onComplete }: { onComplete: () => void }) {
   const [logs, setLogs] = useState<string[]>([]);
@@ -27,6 +27,7 @@ export default function BootScreen({ onComplete }: { onComplete: () => void }) {
       }
     }, 250);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

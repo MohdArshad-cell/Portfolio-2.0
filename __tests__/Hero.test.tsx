@@ -22,7 +22,7 @@ describe('Hero Component', () => {
     render(<Hero />)
     
     // Check if the CV link exists
-    const cvLink = screen.getByText(/DOWNLOAD_CV/i)
+    const cvLink = screen.getByText(/ACCESS_DOSSIER/i)
     expect(cvLink).toBeInTheDocument()
   })
 })

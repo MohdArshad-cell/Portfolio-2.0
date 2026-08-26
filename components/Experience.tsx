@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Calendar, ArrowRight, ExternalLink, Briefcase, Target, Zap } from "lucide-react";
+import { Calendar, ArrowRight, ExternalLink, Target, Zap } from "lucide-react";
 
 const experiences = [
   {
@@ -57,7 +57,7 @@ export default function Experience() {
               {/* Industrial Side-Marker */}
               <div className="absolute -left-6 top-0 bottom-0 w-1 bg-white/5 group-hover:bg-[#00f3ff]/40 transition-all hidden lg:block" />
 
-              <div className="bg-[#0b0d17]/40 border border-white/5 backdrop-blur-xl p-8 md:p-12 hover:border-[#00f3ff]/30 transition-all duration-500 relative overflow-hidden">
+              <div className="bg-white/40 dark:bg-[#0b0d17]/40 border border-black/5 dark:border-white/5 backdrop-blur-xl p-8 md:p-12 hover:border-[#00f3ff]/30 transition-all duration-500 relative overflow-hidden">
                 {/* CRT Scanline Overlay */}
                 <div className="absolute inset-0 pointer-events-none opacity-[0.02] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%)] bg-[length:100%_4px]" />
                 
