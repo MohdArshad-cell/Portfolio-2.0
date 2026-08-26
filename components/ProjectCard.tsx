@@ -50,6 +50,7 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
               alt={`${project.title} Architecture Diagram`}
               width={800}
               height={450}
+              unoptimized={true}
               className="w-full h-auto object-cover opacity-80 hover:opacity-100 transition-opacity"
             />
           </Zoom>
