@@ -4,40 +4,52 @@ import GitHubStats from "./GitHubStats";
 
 const projects = [
   {
-    title: "Career Catalyst",
-    subtitle: "AI Multi-Agent Loop",
-    desc: "Autonomous 4-agent orchestration engine (Analyst -> Strategist -> Writer -> Reviewer) designed to eliminate manual resume tailoring. Optimized via iterative LaTeX rendering to achieve 98% ATS compliance.",
-    tech: ["Java Spring Boot", "Gemini 1.5", "Python", "LaTeX"],
-    stats: "4-Agent Node Cluster", // Unified with Arshad_OS Telemetry
-    statIcon: <Bot size={16} className="text-pink-400"/>, 
-    link: "/project/careercatalyst", 
-    github: "https://github.com/MohdArshad-cell/Career-Catalyst",
-    image: "/asset/careercatalyst_arch.png",
-    color: "hover:border-pink-500/50"
+    title: "SentinelLedger",
+    subtitle: "Distributed Financial Ledger Engine",
+    desc: "Architected a high-throughput payment orchestrator enforcing strict append-only double-entry bookkeeping, Saga failure recovery, and embedded <15ms ONNX fraud evaluation.",
+    tech: ["Java 21", "Spring Boot 3", "Apache Kafka", "PostgreSQL", "Redis Redlock", "ONNX"],
+    stats: "10,000+ RPS | ACID Ledger",
+    statIcon: <Activity size={16} className="text-emerald-400" />,
+    link: "/project/sentinelledger",
+    github: "https://github.com/MohdArshad-cell/SentinelLedger",
+    image: "/asset/sentinelledger_arch.png",
+    color: "hover:border-emerald-500/50"
   },
   {
     title: "FlashTix",
-    subtitle: "High-Concurrency Engine",
-    desc: "Engineered a high-surge ticketing platform using Redis Distributed Locks (LUA scripts) to solve race conditions. Scaled to sustain 5,000+ TPS with zero inventory leakage during stress-testing.",
-    tech: ["Java Spring Boot", "Redis (LUA)", "PostgreSQL", "JMeter"],
-    stats: "5,000+ TPS / Atomic", // Unified with Arshad_OS Telemetry
-    statIcon: <Activity size={16} className="text-[#00f3ff]"/>,
-    link: "/project/flashtix", 
-    github: "https://github.com/MohdArshad-cell/FlashTix", 
+    subtitle: "High-Concurrency Ticketing Engine",
+    desc: "Engineered a distributed booking platform handling 5,000+ RPS without overselling anomalies using atomic Redis Lua scripts, distributed locking, and HikariCP connection tuning.",
+    tech: ["Java 21", "Spring Boot 3", "Redis (Lua/Redlock)", "PostgreSQL", "Prometheus", "Grafana"],
+    stats: "5,000+ RPS | Zero Over-selling",
+    statIcon: <Activity size={16} className="text-[#00f3ff]" />,
+    link: "/project/flashtix",
+    github: "https://github.com/MohdArshad-cell/FlashTix",
     image: "/asset/flashtix_arch.png",
     color: "hover:border-[#00f3ff]/50"
   },
   {
     title: "StreamFlow",
-    subtitle: "Distributed Event Stream",
-    desc: "Architected a fault-tolerant notification backbone using Kafka Consumer Groups. Implemented 3-step retry logic and Dead Letter Queues (DLQ) to ensure zero-loss delivery for 1M+ hourly alerts.",
-    tech: ["Apache Kafka", "Redis LTrim/LPush", "WebSockets", "Java"],
-    stats: "1M+ Events/Hr | Zero-Loss", // Unified with Arshad_OS Telemetry
-    statIcon: <Cpu size={16} className="text-[#7000ff]"/>,
-    link: "/project/streamflow", 
+    subtitle: "Distributed Event Streaming Engine",
+    desc: "Architected a fault-tolerant messaging backbone with Kafka custom partition hashing, Dead Letter Queues (DLQ) retry pipelines, and Redis write-through caching.",
+    tech: ["Java", "Spring Boot", "Apache Kafka", "Redis", "MongoDB", "Zipkin", "Docker"],
+    stats: "10,000+ Events/Sec | Zero Loss",
+    statIcon: <Cpu size={16} className="text-[#7000ff]" />,
+    link: "/project/streamflow",
     github: "https://github.com/MohdArshad-cell/StreamFlow",
     image: "/asset/streamflow_arch.png",
     color: "hover:border-[#7000ff]/50"
+  },
+  {
+    title: "Career Catalyst",
+    subtitle: "AI Document Compilation Engine",
+    desc: "Engineered an asynchronous document compilation pipeline coupling Spring Boot with Python Gemini AI workers to compile structured JSON data into ATS-compliant LaTeX templates.",
+    tech: ["Spring Boot", "Python", "Google Gemini API", "LaTeX", "Redis"],
+    stats: "90%+ ATS Score | Non-blocking",
+    statIcon: <Bot size={16} className="text-pink-400" />,
+    link: "/project/careercatalyst",
+    github: "https://github.com/MohdArshad-cell/Career-Catalyst",
+    image: "/asset/careercatalyst_arch.png",
+    color: "hover:border-pink-500/50"
   }
 ];
 
