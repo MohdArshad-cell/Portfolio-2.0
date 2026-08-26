@@ -45,9 +45,11 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
       {project.image && (
         <div className="mb-6 rounded-lg overflow-hidden border border-white/10 bg-black/50">
           <Zoom classDialog="custom-zoom">
-            <img 
+            <Image 
               src={project.image} 
               alt={`${project.title} Architecture Diagram`}
+              width={800}
+              height={450}
               className="w-full h-auto object-cover opacity-80 hover:opacity-100 transition-opacity"
             />
           </Zoom>
