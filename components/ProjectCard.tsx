@@ -51,7 +51,7 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
               width={800}
               height={450}
               unoptimized={true}
-              className="w-full h-auto object-cover opacity-80 hover:opacity-100 transition-opacity"
+              className="w-full aspect-video object-cover block opacity-80 hover:opacity-100 transition-opacity"
             />
           </Zoom>
         </div>
